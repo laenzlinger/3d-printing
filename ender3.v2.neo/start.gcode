@@ -1,8 +1,9 @@
 ; Ender 3 Custom Start G-code
 G92 E0 ; Reset Extruder
-M140 S{material_bed_temperature_layer_0} ; Set Heat Bed temperature
+M190 S{material_bed_temperature_layer_0} ; Set Heat Bed temperature
 M104 S{material_print_temperature_layer_0} ; Set Extruder temperature
 G28 ; Home all axes
+@BEDLEVELVISUALIZER	; tell the bed visualizer plugin to watch for reported mesh
 G29 ; Auto bed-level (BL-Touch)
 M500 ; Used to store G29 results in memory
 G92 E0 ; Reset Extruder
