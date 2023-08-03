@@ -11,5 +11,16 @@
 
 ### Firmware
 
+Make sure you format your SD card with 4096 byte sector size or it may not flash correctly.
+
+Format a SDCard with 4096 byte sector size in macOS
+
+```
+diskutil list # Find the SDCard you want to format
+
+diskutil info disk4s1 # Get the current SDCard info, assuming the disk is disk4s1
+sudo newfs_msdos -F 32 -b 4096 disk4s1 # Format the SDCard as FAT32 with a 4096 byte sector size, assuming the disk is disk4s1
+```
+
 https://github.com/mriscoc/Ender3V2S1
 https://www.youtube.com/watch?v=GGrDB9gD2Tw
