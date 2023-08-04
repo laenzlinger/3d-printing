@@ -6,6 +6,7 @@ M220 S100 ;Reset Feedrate
 M221 S100 ;Reset Flowrate
 
 G92 E0 ; Reset Extruder
+@BEDLEVELVISUALIZER	; tell the bed visualizer plugin to watch for reported mesh
 G29 P1 ; Home automatically and run mesh leveling on every print
 C108 ; Close the mesh viewer (optional)
 G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
