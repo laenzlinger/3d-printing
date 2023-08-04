@@ -1,0 +1,8 @@
+- current_version: 2023.5.24
+  datetime: '2023-08-01 13:50:25'
+  display_name: Pi Support Plugin
+  release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2023.7.31
+  success: true
+  target: pi_support
+  target_version: 2023.7.31
+  text: Update successful

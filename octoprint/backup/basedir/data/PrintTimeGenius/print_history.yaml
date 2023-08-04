@@ -1,0 +1,72 @@
+print_history:
+- analysisFirstFilamentPrintTime: 7.86915632213595
+  analysisLastFilamentPrintTime: 820.7038665232645
+  analysisPrintTime: 824.9222462345097
+  compensatedPrintTime: 1325.5804130283318
+  firstFilamentPrintTime: 379.2319248069998
+  lastFilamentPrintTime: 1202.2282141739997
+  payload:
+    name: CE3E3V2_kazoo_nut_and_washer.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_kazoo_nut_and_washer.gcode
+    size: 1046543
+    time: 1207.2784984999998
+  timestamp: 1691114061.5023708
+- analysisFirstFilamentPrintTime: 7.869156322135495
+  analysisLastFilamentPrintTime: 7980.234573026541
+  analysisPrintTime: 7984.086932966647
+  compensatedPrintTime: 8503.018758972608
+  firstFilamentPrintTime: 409.4217192720007
+  lastFilamentPrintTime: 8408.002517625002
+  payload:
+    name: CE3E3V2_kazooBody.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_kazooBody.gcode
+    size: 6248022
+    time: 8413.160100527999
+  timestamp: 1691112321.640331
+- analysisFirstFilamentPrintTime: 13.49167485705243
+  analysisLastFilamentPrintTime: 1422.7252204800086
+  analysisPrintTime: 1429.1335660956943
+  compensatedPrintTime: 1930.298213185561
+  firstFilamentPrintTime: 294.17425470899616
+  lastFilamentPrintTime: 1754.5108214939974
+  payload:
+    name: led-ring-washer.gcode
+    origin: local
+    owner: christof
+    path: led-ring-washer.gcode
+    size: 1412576
+    time: 1994.0844323089987
+  timestamp: 1691087250.326838
+- analysisFirstFilamentPrintTime: 13.49167485705243
+  analysisLastFilamentPrintTime: 1402.810245290501
+  analysisPrintTime: 1409.2185909061866
+  compensatedPrintTime: 1907.0134370092528
+  firstFilamentPrintTime: 273.21561856100743
+  lastFilamentPrintTime: 1712.33804474301
+  payload:
+    name: led-ring-washer.gcode
+    origin: local
+    owner: christof
+    path: led-ring-washer.gcode
+    size: 1345406
+    time: 1952.7952379690105
+  timestamp: 1691084961.0350032
+- analysisFirstFilamentPrintTime: 13.49167485705243
+  analysisLastFilamentPrintTime: 1538.7293096547714
+  analysisPrintTime: 1545.1376552704571
+  compensatedPrintTime: 2048.080414363921
+  firstFilamentPrintTime: 231.35576381300052
+  lastFilamentPrintTime: 1810.5711620569928
+  payload:
+    name: led-ring-washer.gcode
+    origin: local
+    owner: christof
+    path: led-ring-washer.gcode
+    size: 1345588
+    time: 2055.2865259550017
+  timestamp: 1691082797.45293
+version: 2.3.1

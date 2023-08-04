@@ -1,0 +1,2 @@
+M75 {{ event.name }}
+M117 Print was resumed

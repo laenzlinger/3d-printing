@@ -1,0 +1,6 @@
+backup/basedir/data/backup
+backup/basedir/data/prusaslicerthumbnails
+backup/basedir/data/appkeys/keys.yaml
+backup/basedir/users.yaml
+backup/basedir/config.backup
+*.cache

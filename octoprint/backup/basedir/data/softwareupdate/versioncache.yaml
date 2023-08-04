@@ -1,0 +1,199 @@
+PrintTimeGenius:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 08fb44e10635c1c3ee3a398c5ff96277
+  information:
+    local:
+      name: 2.3.1
+      value: 2.3.1
+    needs_online: true
+    remote:
+      name: '2.3.1: Minor release'
+      release_notes: https://github.com/eyal0/OctoPrint-PrintTimeGenius/releases/tag/2.3.1
+      value: 2.3.1
+  online: true
+  possible: true
+  timestamp: 1691094873.6449237
+__version: 1.9.2
+bedlevelvisualizer:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: bbdc97929c3b38f1afb78f104f4ad146
+  information:
+    local:
+      name: 1.1.1
+      value: 1.1.1
+    needs_online: true
+    remote:
+      name: 1.1.1
+      release_notes: https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/releases/tag/1.1.1
+      value: 1.1.1
+  online: true
+  possible: true
+  timestamp: 1691153416.186533
+eeprom_marlin:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: b01d967aaf0c7c2aff3ccd86b896ba02
+  information:
+    local:
+      name: 3.3.0
+      value: 3.3.0
+    needs_online: true
+    remote:
+      name: 3.3.0 Stable Release
+      release_notes: https://github.com/cp2004/OctoPrint-EEPROM-Marlin/releases/tag/3.3.0
+      value: 3.3.0
+  online: true
+  possible: true
+  timestamp: 1691097199.242231
+file_check:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 1fd5482b4fa54235531810fa4bf95620
+  information:
+    local:
+      name: 2021.2.23
+      value: 2021.2.23
+    needs_online: true
+    remote:
+      name: 2021.2.23
+      release_notes: https://github.com/OctoPrint/OctoPrint-FileCheck/releases/tag/2021.2.23
+      value: 2021.2.23
+  online: true
+  possible: true
+  timestamp: 1691153416.162476
+firmware_check:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 2cc0c5c664767763a036f68d2318d063
+  information:
+    local:
+      name: 2021.10.11
+      value: 2021.10.11
+    needs_online: true
+    remote:
+      name: 2021.10.11
+      release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareCheck/releases/tag/2021.10.11
+      value: 2021.10.11
+  online: true
+  possible: true
+  timestamp: 1691153415.9446602
+firmwareupdater:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: b2a1ff63a082b87e4c5c6f5402f4d6b9
+  information:
+    local:
+      name: 1.14.0
+      value: 1.14.0
+    needs_online: true
+    remote:
+      name: 1.14.0
+      release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/releases/tag/1.14.0
+      value: 1.14.0
+  online: true
+  possible: true
+  timestamp: 1691153416.2643638
+octoprint:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 074b030be77e8492f5dd2c79e982e8f6
+  information:
+    local:
+      name: 1.9.2
+      value: 1.9.2
+    needs_online: true
+    remote:
+      name: 1.9.2
+      release_notes: https://github.com/OctoPrint/OctoPrint/releases/tag/1.9.2
+      value: 1.9.2
+  online: true
+  possible: true
+  timestamp: 1691158276.0242891
+pi_support:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: dd90c0aabeb1c16366bc4d1f6b0584cc
+  information:
+    local:
+      name: 2023.7.31
+      value: 2023.7.31
+    needs_online: true
+    remote:
+      name: 2023.7.31
+      release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2023.7.31
+      value: 2023.7.31
+  online: true
+  possible: true
+  timestamp: 1691153415.996489
+preheat:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: a1f57f17ec958dab6294e947d87119a2
+  information:
+    local:
+      name: 0.8.0
+      value: 0.8.0
+    needs_online: true
+    remote:
+      name: Add preheat on file select feature and fix a UI bug with UI Customizer
+      release_notes: https://github.com/marian42/octoprint-preheat/releases/tag/0.8.0
+      value: 0.8.0
+  online: true
+  possible: true
+  timestamp: 1691153416.5326853
+prusaslicerthumbnails:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: b879889664cccb179ae629434b91f50e
+  information:
+    local:
+      name: 1.0.2
+      value: 1.0.2
+    needs_online: true
+    remote:
+      name: 1.0.2
+      release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.0.2
+      value: 1.0.2
+  online: true
+  possible: true
+  timestamp: 1691158276.0074265
+uicustomizer:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 6fd3896c5571e66d8052b5e9350b7de9
+  information:
+    local:
+      name: 0.1.9.4
+      value: 0.1.9.4
+    needs_online: true
+    remote:
+      name: 0.1.9.4 - 1.9.0RC3 cam
+      release_notes: https://github.com/LazeMSS/OctoPrint-UICustomizer/releases/tag/0.1.9.4
+      value: 0.1.9.4
+  online: true
+  possible: true
+  timestamp: 1691094873.656964
