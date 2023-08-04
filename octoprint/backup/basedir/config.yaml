@@ -161,6 +161,7 @@ printerProfiles:
 serial:
   autoconnect: true
   baudrate: 250000
+  enableShutdownActionCommand: true
   port: /dev/ttyUSB0
   sdCancelCommand: M524
 server:
