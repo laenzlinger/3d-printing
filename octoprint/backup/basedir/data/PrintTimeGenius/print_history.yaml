@@ -1,72 +1,70 @@
 print_history:
 - analysisFirstFilamentPrintTime: 7.86915632213595
-  analysisLastFilamentPrintTime: 820.7038665232645
-  analysisPrintTime: 824.9222462345097
-  compensatedPrintTime: 1325.5804130283318
-  firstFilamentPrintTime: 379.2319248069998
-  lastFilamentPrintTime: 1202.2282141739997
+  analysisLastFilamentPrintTime: 1070.9819358344735
+  analysisPrintTime: 1074.1247759882945
+  compensatedPrintTime: 1398.9718043233288
+  firstFilamentPrintTime: 281.4938774589973
+  lastFilamentPrintTime: 1335.6420911359892
   payload:
-    name: CE3E3V2_kazoo_nut_and_washer.gcode
+    name: CE3E3V2_100mm.gcode
     origin: local
     owner: christof
-    path: CE3E3V2_kazoo_nut_and_washer.gcode
-    size: 1046543
-    time: 1207.2784984999998
-  timestamp: 1691114061.5023708
-- analysisFirstFilamentPrintTime: 7.869156322135495
-  analysisLastFilamentPrintTime: 7980.234573026541
-  analysisPrintTime: 7984.086932966647
-  compensatedPrintTime: 8503.018758972608
-  firstFilamentPrintTime: 409.4217192720007
-  lastFilamentPrintTime: 8408.002517625002
+    path: CE3E3V2_100mm.gcode
+    size: 112798
+    time: 1358.608596000995
+  timestamp: 1691539126.3904784
+- analysisFirstFilamentPrintTime: 7.86915632213595
+  analysisLastFilamentPrintTime: 2125.100014827642
+  analysisPrintTime: 2129.595232226599
+  compensatedPrintTime: 2466.6914026271725
+  firstFilamentPrintTime: 249.2487972889794
+  lastFilamentPrintTime: 2343.033468901005
   payload:
-    name: CE3E3V2_kazooBody.gcode
+    name: CE3E3V2_245mm.gcode
     origin: local
     owner: christof
-    path: CE3E3V2_kazooBody.gcode
-    size: 6248022
-    time: 8413.160100527999
-  timestamp: 1691112321.640331
-- analysisFirstFilamentPrintTime: 13.49167485705243
-  analysisLastFilamentPrintTime: 1422.7252204800086
-  analysisPrintTime: 1429.1335660956943
-  compensatedPrintTime: 1930.298213185561
-  firstFilamentPrintTime: 294.17425470899616
-  lastFilamentPrintTime: 1754.5108214939974
+    path: CE3E3V2_245mm.gcode
+    size: 164513
+    time: 2388.839138490992
+  timestamp: 1691537558.909987
+- analysisFirstFilamentPrintTime: 7.869156322136405
+  analysisLastFilamentPrintTime: 8438.422546087048
+  analysisPrintTime: 8443.237829024092
+  compensatedPrintTime: 8739.762124832912
+  firstFilamentPrintTime: 334.4258831209954
+  lastFilamentPrintTime: 8796.610489563995
   payload:
-    name: led-ring-washer.gcode
+    name: CE3E3V2_PB_212_LH_RB_Holder.gcode
     origin: local
     owner: christof
-    path: led-ring-washer.gcode
-    size: 1412576
-    time: 1994.0844323089987
-  timestamp: 1691087250.326838
-- analysisFirstFilamentPrintTime: 13.49167485705243
-  analysisLastFilamentPrintTime: 1402.810245290501
-  analysisPrintTime: 1409.2185909061866
-  compensatedPrintTime: 1907.0134370092528
-  firstFilamentPrintTime: 273.21561856100743
-  lastFilamentPrintTime: 1712.33804474301
+    path: CE3E3V2_PB_212_LH_RB_Holder.gcode
+    size: 2313065
+    time: 8803.292572325998
+  timestamp: 1691367370.8699841
+- analysisFirstFilamentPrintTime: 7.869156322136405
+  analysisLastFilamentPrintTime: 10690.908435844174
+  analysisPrintTime: 10695.343504854043
+  compensatedPrintTime: 11006.591808079704
+  firstFilamentPrintTime: 343.6831568009984
+  lastFilamentPrintTime: 11027.165216372
   payload:
-    name: led-ring-washer.gcode
+    name: CE3E3V2_PB_212_LH_RB_Holder.gcode
     origin: local
     owner: christof
-    path: led-ring-washer.gcode
-    size: 1345406
-    time: 1952.7952379690105
-  timestamp: 1691084961.0350032
-- analysisFirstFilamentPrintTime: 13.49167485705243
-  analysisLastFilamentPrintTime: 1538.7293096547714
-  analysisPrintTime: 1545.1376552704571
-  compensatedPrintTime: 2048.080414363921
-  firstFilamentPrintTime: 231.35576381300052
-  lastFilamentPrintTime: 1810.5711620569928
+    path: CE3E3V2_PB_212_LH_RB_Holder.gcode
+    size: 2556950
+    time: 11033.186744530001
+  timestamp: 1691357868.05405
+- analysisFirstFilamentPrintTime: 7.86915632213595
+  analysisLastFilamentPrintTime: 2450.8415640639564
+  analysisPrintTime: 2454.429426732134
+  compensatedPrintTime: 2729.332805713324
   payload:
-    name: led-ring-washer.gcode
+    name: CE3E3V2_9vclip_3m_holes.gcode
     origin: local
     owner: christof
-    path: led-ring-washer.gcode
-    size: 1345588
-    time: 2055.2865259550017
-  timestamp: 1691082797.45293
+    path: CE3E3V2_9vclip_3m_holes.gcode
+    size: 707336
+    time: 2800.38078023
+  timestamp: 1691345916.5882049
 version: 2.3.1

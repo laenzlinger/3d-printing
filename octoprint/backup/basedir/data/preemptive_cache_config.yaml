@@ -1,11 +1,11 @@
 /:
-- _count: 61
-  _timestamp: 1691158313.7679887
+- _count: 73
+  _timestamp: 1691588810.8342505
   base_url: http://octo.local/
   path: /
   query_string: l10n=en
-- _count: 30
-  _timestamp: 1691082992.32774
+- _count: 47
+  _timestamp: 1691534958.825359
   base_url: http://192.168.1.155/
   path: /
   query_string: l10n=en

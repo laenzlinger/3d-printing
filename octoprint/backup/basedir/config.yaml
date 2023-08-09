@@ -1,6 +1,12 @@
 api:
   key: 064C44F2A5AF42D3A17BD90431941F6B
 plugins:
+  HeaterTimeout:
+    _config_version: 2
+  active_filters_extended:
+    activeFilters:
+    - '(Send: (N\d+\s+)?M105)|(Recv:\s+(ok\s+([PBN]\d+\s+)*)?([BCLPR]|T\d*):-?\d+)'
+    - 'Recv: (echo:\s*)?busy:\s*processing'
   announcements:
     _config_version: 1
     channels:
@@ -24,36 +30,36 @@ plugins:
       M155 S3   ; set the temperature reporting delay back to a shorter time span.
     descending_y: true
     graph_z_limits: -1,1
-    mesh_timestamp: 04/08/2023, 16:23:43
+    mesh_timestamp: 09/08/2023, 00:58:25
     screw_hub: 0.7
     show_stored_mesh_on_tab: true
     showdegree: true
     stored_mesh:
-    - - '+0.03'
-      - '+0.05'
-      - '+0.06'
-      - '+0.04'
-      - '+0.03'
-    - - '+0.00'
-      - '+0.02'
-      - '+0.02'
-      - '+0.02'
-      - '+0.03'
-    - - '+0.01'
-      - '+0.02'
-      - '+0.03'
-      - '+0.02'
-      - '+0.03'
-    - - '-0.02'
-      - '+0.01'
-      - '+0.02'
-      - '+0.03'
-      - '+0.06'
-    - - '+0.04'
-      - '+0.03'
-      - '+0.05'
-      - '+0.05'
-      - '+0.05'
+    - - '0.000'
+      - '+0.020'
+      - '+0.015'
+      - '+0.025'
+      - '+0.010'
+    - - '-0.018'
+      - '+0.007'
+      - '+0.015'
+      - '+0.015'
+      - '+0.015'
+    - - '-0.020'
+      - '-0.005'
+      - '-0.003'
+      - '+0.007'
+      - '-0.003'
+    - - '-0.040'
+      - '-0.015'
+      - '-0.003'
+      - '+0.002'
+      - '+0.025'
+    - - '+0.015'
+      - '0.000'
+      - '+0.030'
+      - '+0.030'
+      - '0.000'
     stored_mesh_x:
     - 30
     - 70
@@ -69,6 +75,7 @@ plugins:
     stored_mesh_z_height: 259
   classicwebcam:
     _config_version: 1
+    flipV: true
     snapshot: http://127.0.0.1:8080/?action=snapshot
     stream: /webcam/?action=stream
   cura:
@@ -93,6 +100,7 @@ plugins:
     enabled: true
     unique_id: f0395568-4efc-4e0c-b571-83b955aa5677
   uicustomizer:
+    gcodeZoom: 1
     mainTabs:
     - - control_link
       - true
@@ -130,6 +138,12 @@ plugins:
       - false
       - textOnly
       - '#000000'
+    - - timelapse_link
+      - true
+      - false
+      - false
+      - textOnly
+      - '#000000'
     rows:
     - _00#state_wrapper: true
       _01#files_wrapper: true
@@ -162,7 +176,6 @@ serial:
   autoconnect: true
   baudrate: 250000
   enableShutdownActionCommand: true
-  port: /dev/ttyUSB0
   sdCancelCommand: M524
 server:
   commands:
@@ -193,6 +206,4 @@ temperature:
     name: PLA
 webcam:
   ffmpeg: /usr/bin/ffmpeg
-  timelapseEnabled: false
   watermark: false
-  webcamEnabled: false

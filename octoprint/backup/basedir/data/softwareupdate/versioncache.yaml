@@ -1,3 +1,21 @@
+HeaterTimeout:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 0cdc26f9153bb1bdb59ec489b0eb88c6
+  information:
+    local:
+      name: 0.0.4
+      value: 0.0.4
+    needs_online: true
+    remote:
+      name: Octoprint HeaterTimeout 0.0.4
+      release_notes: https://github.com/Andy-ch/OctoPrint-HeaterTimeout/releases/tag/0.0.4
+      value: 0.0.4
+  online: true
+  possible: true
+  timestamp: 1691534384.5660377
 PrintTimeGenius:
   available: false
   compatible: true
@@ -15,8 +33,26 @@ PrintTimeGenius:
       value: 2.3.1
   online: true
   possible: true
-  timestamp: 1691094873.6449237
+  timestamp: 1691534384.372699
 __version: 1.9.2
+active_filters_extended:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: d9ea6df9ab63c03bfd70226690f6e494
+  information:
+    local:
+      name: 0.1.0
+      value: 0.1.0
+    needs_online: true
+    remote:
+      name: 0.1.0
+      release_notes: https://github.com/jneilliii/OctoPrint-ActiveFiltersExtended/releases/tag/0.1.0
+      value: 0.1.0
+  online: true
+  possible: true
+  timestamp: 1691534384.5161877
 bedlevelvisualizer:
   available: false
   compatible: true
@@ -34,7 +70,7 @@ bedlevelvisualizer:
       value: 1.1.1
   online: true
   possible: true
-  timestamp: 1691153416.186533
+  timestamp: 1691534384.7837832
 eeprom_marlin:
   available: false
   compatible: true
@@ -52,7 +88,7 @@ eeprom_marlin:
       value: 3.3.0
   online: true
   possible: true
-  timestamp: 1691097199.242231
+  timestamp: 1691534385.0163941
 file_check:
   available: false
   compatible: true
@@ -70,7 +106,7 @@ file_check:
       value: 2021.2.23
   online: true
   possible: true
-  timestamp: 1691153416.162476
+  timestamp: 1691534384.7862136
 firmware_check:
   available: false
   compatible: true
@@ -88,7 +124,7 @@ firmware_check:
       value: 2021.10.11
   online: true
   possible: true
-  timestamp: 1691153415.9446602
+  timestamp: 1691534384.9288533
 firmwareupdater:
   available: false
   compatible: true
@@ -106,13 +142,13 @@ firmwareupdater:
       value: 1.14.0
   online: true
   possible: true
-  timestamp: 1691153416.2643638
+  timestamp: 1691534385.297501
 octoprint:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: 074b030be77e8492f5dd2c79e982e8f6
+  hash: 7bcd9636cacd9acae9523a3c70479e61
   information:
     local:
       name: 1.9.2
@@ -124,7 +160,7 @@ octoprint:
       value: 1.9.2
   online: true
   possible: true
-  timestamp: 1691158276.0242891
+  timestamp: 1691587040.8303456
 pi_support:
   available: false
   compatible: true
@@ -142,7 +178,7 @@ pi_support:
       value: 2023.7.31
   online: true
   possible: true
-  timestamp: 1691153415.996489
+  timestamp: 1691534385.0353708
 preheat:
   available: false
   compatible: true
@@ -160,7 +196,7 @@ preheat:
       value: 0.8.0
   online: true
   possible: true
-  timestamp: 1691153416.5326853
+  timestamp: 1691534385.198949
 prusaslicerthumbnails:
   available: false
   compatible: true
@@ -178,22 +214,22 @@ prusaslicerthumbnails:
       value: 1.0.2
   online: true
   possible: true
-  timestamp: 1691158276.0074265
+  timestamp: 1691534385.217794
 uicustomizer:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: 6fd3896c5571e66d8052b5e9350b7de9
+  hash: 22d13c8c9b4233d10fc3dfd13327f868
   information:
     local:
-      name: 0.1.9.4
-      value: 0.1.9.4
+      name: 0.1.9.8
+      value: 0.1.9.8
     needs_online: true
     remote:
-      name: 0.1.9.4 - 1.9.0RC3 cam
-      release_notes: https://github.com/LazeMSS/OctoPrint-UICustomizer/releases/tag/0.1.9.4
-      value: 0.1.9.4
+      name: 0.1.9.8 - Webcam and gcode fixes
+      release_notes: https://github.com/LazeMSS/OctoPrint-UICustomizer/releases/tag/0.1.9.8
+      value: 0.1.9.8
   online: true
   possible: true
-  timestamp: 1691094873.656964
+  timestamp: 1691537655.9627256
