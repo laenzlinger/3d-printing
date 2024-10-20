@@ -12,24 +12,28 @@
 
 ### Firmware
 
-Make sure you format your SD card with 4096 byte sector size or it may not flash 
+Make sure you format your SD card with 4096 byte sector size or it may not flash
 correctly.
 
-To format a SDCard with 4096 byte sector size in macOS:
+To format a SD card with 4096 byte sector size in macOS:
 
-```
-diskutil list # Find the SDCard you want to format
+```sh
+# Find the SD card you want to format
+diskutil list
 
-diskutil info disk4s1 # Get the current SDCard info, assuming the disk is disk4s1
-sudo newfs_msdos -F 32 -b 4096 disk4s1 # Format the SDCard as FAT32 with a 4096 byte sector size, assuming the disk is disk4s1
+# Get the current SD card info, assuming the disk is disk4s1
+diskutil info disk4s1
+
+# Format the SD card as FAT32 with a 4096 byte sector size, assuming the disk is disk4s1
+sudo newfs_msdos -F 32 -b 4096 disk4s1
 ```
 
 The [Professional Firmware](https://github.com/mriscoc/Ender3V2S1) is used.
 
 My hardware is still stock:
-- Creality 4.2.2 Mainboard
-- TJC display
+
+* Creality 4.2.2 Mainboard
+* TJC display
 
 Therefore i had to install a [custom build](https://github.com/mriscoc/Special_Configurations/releases/tag/tjc)
 Current version is: Ender3V2-422-BLTUBL-TJC-MPC-20230525.bin
-
