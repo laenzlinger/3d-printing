@@ -36,4 +36,4 @@ My hardware is still stock:
 * TJC display
 
 Therefore i had to install a [custom build](https://github.com/mriscoc/Special_Configurations/releases/tag/tjc)
-Current version is: Ender3V2-422-BLTUBL-TJC-MPC-20230525.bin
+Current version is: Ender3V2-422-BLTUBL-TJC-MPC-20240127.bin
