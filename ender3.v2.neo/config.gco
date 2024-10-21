@@ -13,6 +13,7 @@ M256 B127              ; Set Brightness
 M413 S0                ; Disable Powerloss recovery
 M603 L0.00 U100.00     ; Configure Filament Change
 M851 X-41.50 Y-7.00 Z-2.70 ; Z-Probe Offset: (mm)
+M412 S1 D25.00         ; Filament runout sensor: ON
 M500                   ; Save all settings
 ;-----------------------------------------------------
 G4 S1                  ; Wait a second
