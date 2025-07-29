@@ -69,68 +69,75 @@ function getBitSize(bitNumber = 0) = (bitNumber * $bit_increment);
 // Drawing Process
 //-----------------------------------------------------------------
 
-union()
+module drill_bit_holder()
 {
-    difference()
+    union()
     {
         difference()
         {
-            // Draw the base model which every thing else is subtracted from
-            union()
+            difference()
             {
-                cube([ $base_width, $base_depth, $base_height ]);
-                for (a = [1:1:$rows - 1])
+                // Draw the base model which every thing else is subtracted from
+                union()
                 {
-                    translate([ 0, (a * $row_depth) + $chamfer_side, $base_height ])
-                        cube([ $base_width, $row_depth, a * $row_height ]);
+                    cube([ $base_width, $base_depth, $base_height ]);
+                    for (a = [1:1:$rows - 1])
+                    {
+                        translate([ 0, (a * $row_depth) + $chamfer_side, $base_height ])
+                            cube([ $base_width, $row_depth, a * $row_height ]);
+                    }
                 }
+
+                // for the chamfer at front
+                translate([ -1, 0, $base_height - $chamfer_side ]) rotate([ 45, 0, 0 ])
+                    cube([ $base_width + 2, $chamfer_size, $chamfer_size ]);
             }
+            // Loop through bit holes
+            for (a = [$bit_min_size:$bit_increment:$bit_max_size], b = [0:1:$rows - 1])
+            {
 
-            // for the chamfer at front
-            translate([ -1, 0, $base_height - $chamfer_side ]) rotate([ 45, 0, 0 ])
-                cube([ $base_width + 2, $chamfer_size, $chamfer_size ]);
+                $bit_size = getBitSize(a);
+                $bit_radius = ((min(a, $bit_max_shaft_size) + $fit_tolerance) / 2);
+
+                $x = getX(a / $bit_increment) - getX($bit_min_size / $bit_increment) + ($gap_between_bits) +
+                     $bit_min_size;
+                $y = $chamfer_side + (b * $row_depth) + ($row_depth / 2);
+                $z = $base_height + (b * $row_height);
+
+                echo(str("Drawing bit (mm): ", a));
+                echo(str("Drawing bit radius (mm): ", $bit_radius));
+
+                // For bit holes
+
+                rotate([ 10, 0, 0 ]) translate([ $x, $y + 2, $z - ($bit_depth / 2) ])
+                    cylinder(r = $bit_radius, h = $bit_depth, center = true);
+
+                // For hole chamfer
+                translate([ $x, $y, $z - ($bit_chamfer_depth / 2) + 0.1 ]) cylinder(
+                    r1 = $bit_radius, r2 = $bit_radius + $bit_chamfer_size, h = $bit_chamfer_depth, center = true);
+            }
         }
-        // Loop through bit holes
-        for (a = [$bit_min_size:$bit_increment:$bit_max_size], b = [0:1:$rows - 1])
+
+        // Write out the labels
+        for (a = [$bit_min_size:$bit_increment:$bit_max_size])
         {
 
-            $bit_size = getBitSize(a);
-            $bit_radius = ((min(a, $bit_max_shaft_size) + $fit_tolerance) / 2);
+            translate([
+                getX(a / $bit_increment) - getX($bit_min_size / $bit_increment) + ($gap_between_bits) + $bit_min_size,
+                $chamfer_side * 0.60, $base_height - ($chamfer_side * 0.39)
+            ]) rotate([ 45, 0, 0 ]) color([ 0, 0, 1 ]) linear_extrude(+2)
 
-            $x = getX(a / $bit_increment) - getX($bit_min_size / $bit_increment) + ($gap_between_bits) + $bit_min_size;
-            $y = $chamfer_side + (b * $row_depth) + ($row_depth / 2);
-            $z = $base_height + (b * $row_height);
-
-            echo(str("Drawing bit (mm): ", a));
-            echo(str("Drawing bit radius (mm): ", $bit_radius));
-
-            // For bit holes
-
-            rotate([ 10, 0, 0 ]) translate([ $x, $y + 2, $z - ($bit_depth / 2) ])
-                cylinder(r = $bit_radius, h = $bit_depth, center = true);
-
-            // For hole chamfer
-            translate([ $x, $y, $z - ($bit_chamfer_depth / 2) + 0.1 ])
-                cylinder(r1 = $bit_radius, r2 = $bit_radius + $bit_chamfer_size, h = $bit_chamfer_depth, center = true);
-        }
-    }
-
-    // Write out the labels
-    for (a = [$bit_min_size:$bit_increment:$bit_max_size])
-    {
-
-        translate([
-            getX(a / $bit_increment) - getX($bit_min_size / $bit_increment) + ($gap_between_bits) + $bit_min_size,
-            $chamfer_side * 0.60, $base_height - ($chamfer_side * 0.39)
-        ]) rotate([ 45, 0, 0 ]) color([ 0, 0, 1 ]) linear_extrude(+2)
-
-            if (a % 1 == 0)
-        {
-            text(str(a), font = "Arial Style:Bold", size = $chamfer_size * 0.54, halign = "center", valign = "top");
-        }
-        else
-        {
-            text(str(a), font = "Arial Style:Bold", size = $chamfer_size * 0.22, halign = "center", valign = "bottom");
+                if (a % 1 == 0)
+            {
+                text(str(a), font = "Arial Style:Bold", size = $chamfer_size * 0.54, halign = "center", valign = "top");
+            }
+            else
+            {
+                text(str(a), font = "Arial Style:Bold", size = $chamfer_size * 0.22, halign = "center",
+                     valign = "bottom");
+            }
         }
     }
 }
+
+drill_bit_holder();
