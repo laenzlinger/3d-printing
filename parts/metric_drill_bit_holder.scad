@@ -3,6 +3,7 @@
 //
 //
 // Glen Foley CC 2022
+// Remixed by laenzi
 //=================================================================
 
 //-----------------------------------------------------------------
@@ -13,17 +14,18 @@ $fn = 41; // Number of faces per hole
 $base_height = 15;    // Also the height of each row step (mm)
 $fit_tolerance = 0.6; // Extra space given per drill bit (mm)
 
-$bit_min_size = 1;    // Smallest drill bit in (mm)
-$bit_max_size = 10;   // Largest Drill bit in (mm)
-$bit_increment = 0.5; // Difference between each bit (mm)
-$bit_depth = 14;      // Depth the drill bit goes into holder
+$bit_min_size = 1;        // Smallest drill bit in (mm)
+$bit_max_size = 13;       // Largest drill bit in (mm)
+$bit_increment = 0.5;     // Difference between each bit (mm)
+$bit_depth = 14;          // Depth the drill bit goes into holder
+$bit_max_shaft_size = 10; // Larger drill bits might have smaller shaft
 
 $bit_chamfer_depth = 2.0; // depth of the cone which forms the chamfer around the bit
 $bit_chamfer_size = 1.2;  // the size of the bit chamfer
 
-$gap_between_bits = 3.6; // Gap between bits (mm)
+$gap_between_bits = 8; // Gap between bits (mm)
 
-$rows = 3;        // Number of rows of bits
+$rows = 1;        // Number of rows of bits
 $row_padding = 7; // Padding between holes between rows
 $row_height = 15; // Height the the steps (0 if not desired)
 
@@ -93,7 +95,7 @@ union()
         {
 
             $bit_size = getBitSize(a);
-            $bit_radius = ((a + $fit_tolerance) / 2);
+            $bit_radius = ((min(a, $bit_max_shaft_size) + $fit_tolerance) / 2);
 
             $x = getX(a / $bit_increment) - getX($bit_min_size / $bit_increment) + ($gap_between_bits) + $bit_min_size;
             $y = $chamfer_side + (b * $row_depth) + ($row_depth / 2);
@@ -103,7 +105,9 @@ union()
             echo(str("Drawing bit radius (mm): ", $bit_radius));
 
             // For bit holes
-            translate([ $x, $y, $z - ($bit_depth / 2) ]) cylinder(r = $bit_radius, h = $bit_depth, center = true);
+
+            rotate([ 10, 0, 0 ]) translate([ $x, $y + 2, $z - ($bit_depth / 2) ])
+                cylinder(r = $bit_radius, h = $bit_depth, center = true);
 
             // For hole chamfer
             translate([ $x, $y, $z - ($bit_chamfer_depth / 2) + 0.1 ])
@@ -126,7 +130,7 @@ union()
         }
         else
         {
-            text(str(a), font = "Arial Style:Bold", size = $chamfer_size * 0.32, halign = "center", valign = "bottom");
+            text(str(a), font = "Arial Style:Bold", size = $chamfer_size * 0.22, halign = "center", valign = "bottom");
         }
     }
 }
