@@ -25,7 +25,7 @@ $bit_chamfer_size = 1.2;  // the size of the bit chamfer
 
 $gap_between_bits = 8; // Gap between bits (mm)
 
-$rows = 1;        // Number of rows of bits
+$rows = 4;        // Number of rows of bits
 $row_padding = 7; // Padding between holes between rows
 $row_height = 15; // Height the the steps (0 if not desired)
 
