@@ -1,0 +1,29 @@
+{
+  "last_version": "1.10.3",
+  "seen_versions": 2,
+  "server_starts": 15,
+  "prints_started": 63,
+  "prints_cancelled": 0,
+  "prints_errored": 0,
+  "prints_finished": 48,
+  "prints_started_per_weekday": {
+    "4": 4,
+    "5": 17,
+    "6": 26,
+    "0": 11,
+    "1": 3,
+    "2": 2
+  },
+  "print_duration_total": 410080.48871622054,
+  "print_duration_cancelled": 0.0,
+  "print_duration_errored": 0.0,
+  "print_duration_finished": 394671.7509462213,
+  "longest_print_duration": 51842.992892199996,
+  "longest_print_date": 1734516665,
+  "files_uploaded": 40,
+  "files_deleted": 49,
+  "plugins_installed": 0,
+  "plugins_uninstalled": 0,
+  "most_plugins": 30,
+  "achievements": 12
+}

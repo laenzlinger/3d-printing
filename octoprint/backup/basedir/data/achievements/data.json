@@ -1,0 +1,63 @@
+{
+  "stats": {
+    "last_version": "1.11.2",
+    "seen_versions": 5,
+    "server_starts": 98,
+    "prints_started": 181,
+    "prints_cancelled": 0,
+    "prints_errored": 0,
+    "prints_finished": 142,
+    "prints_started_per_weekday": {
+      "4": 23,
+      "5": 35,
+      "6": 54,
+      "0": 27,
+      "1": 28,
+      "2": 9,
+      "3": 5
+    },
+    "print_duration_total": 1517339.2244410121,
+    "print_duration_cancelled": 0.0,
+    "print_duration_errored": 0.0,
+    "print_duration_finished": 1379164.9235833373,
+    "longest_print_duration": 51842.992892199996,
+    "longest_print_date": 1734516665,
+    "files_uploaded": 146,
+    "files_deleted": 90,
+    "plugins_installed": 1,
+    "plugins_uninstalled": 0,
+    "most_plugins": 34,
+    "created": 1729281740,
+    "created_version": "1.10.2"
+  },
+  "achievements": {
+    "the_wizard": 1729281747,
+    "night_owl": 1729286218,
+    "tgif": 1729286218,
+    "all_beginnings_are_hard": 1729286379,
+    "one_small_step_for_man": 1729301508,
+    "the_manufacturer_i": 1730497833,
+    "what_could_possibly_go_wrong": 1730756651,
+    "the_organizer": 1731831636,
+    "santas_little_helper": 1733010517,
+    "so_close": 1733056304,
+    "weekend_warrior": 1733592899,
+    "half_marathon": 1734516665,
+    "the_manufacturer_ii": 1751195871,
+    "the_collector_i": 1751212101,
+    "early_bird": 1754269245,
+    "crossover_episode": 1754825036,
+    "adventurer": 1754836772
+  },
+  "state": {
+    "date_last_print": "2025-08-10",
+    "prints_today": 3,
+    "date_last_cancelled_print": "2025-08-10",
+    "prints_cancelled_today": 4,
+    "consecutive_prints_cancelled_today": 4,
+    "file_last_print": "local:Calibration.gcode:1754833713",
+    "consecutive_prints_of_same_file": 1,
+    "date_last_weekend_print": "2025-08-10",
+    "consecutive_weekend_prints": 11
+  }
+}
