@@ -1,70 +1,72 @@
 print_history:
-- analysisFirstFilamentPrintTime: 7.86915632213595
-  analysisLastFilamentPrintTime: 1070.9819358344735
-  analysisPrintTime: 1074.1247759882945
-  compensatedPrintTime: 1398.9718043233288
-  firstFilamentPrintTime: 281.4938774589973
-  lastFilamentPrintTime: 1335.6420911359892
+- analysisFirstFilamentPrintTime: 1.8730038458306808
+  analysisLastFilamentPrintTime: 1569.4004024899302
+  analysisPrintTime: 1569.4004024899302
+  compensatedPrintTime: 1743.583133736849
+  firstFilamentPrintTime: 51.867300173999865
+  lastFilamentPrintTime: 1320.833405024
   payload:
-    name: CE3E3V2_100mm.gcode
+    name: Calibration.gcode
     origin: local
     owner: christof
-    path: CE3E3V2_100mm.gcode
-    size: 112798
-    time: 1358.608596000995
-  timestamp: 1691539126.3904784
-- analysisFirstFilamentPrintTime: 7.86915632213595
-  analysisLastFilamentPrintTime: 2125.100014827642
-  analysisPrintTime: 2129.595232226599
-  compensatedPrintTime: 2466.6914026271725
-  firstFilamentPrintTime: 249.2487972889794
-  lastFilamentPrintTime: 2343.033468901005
-  payload:
-    name: CE3E3V2_245mm.gcode
-    origin: local
-    owner: christof
-    path: CE3E3V2_245mm.gcode
-    size: 164513
-    time: 2388.839138490992
-  timestamp: 1691537558.909987
+    path: Calibration.gcode
+    size: 366190
+    time: 1324.0079104229999
+  timestamp: 1754835041.1512084
 - analysisFirstFilamentPrintTime: 7.869156322136405
-  analysisLastFilamentPrintTime: 8438.422546087048
-  analysisPrintTime: 8443.237829024092
-  compensatedPrintTime: 8739.762124832912
-  firstFilamentPrintTime: 334.4258831209954
-  lastFilamentPrintTime: 8796.610489563995
+  analysisLastFilamentPrintTime: 26712.88463472275
+  analysisPrintTime: 26716.725086223585
+  compensatedPrintTime: 26909.546540805368
+  firstFilamentPrintTime: 117.04164521699568
+  lastFilamentPrintTime: 20295.972138983998
   payload:
-    name: CE3E3V2_PB_212_LH_RB_Holder.gcode
+    name: CE3E3V2_spool roller.gcode
     origin: local
     owner: christof
-    path: CE3E3V2_PB_212_LH_RB_Holder.gcode
-    size: 2313065
-    time: 8803.292572325998
-  timestamp: 1691367370.8699841
+    path: CE3E3V2_spool roller.gcode
+    size: 8367545
+    time: 20300.883517587994
+  timestamp: 1754780507.0471158
 - analysisFirstFilamentPrintTime: 7.869156322136405
-  analysisLastFilamentPrintTime: 10690.908435844174
-  analysisPrintTime: 10695.343504854043
-  compensatedPrintTime: 11006.591808079704
-  firstFilamentPrintTime: 343.6831568009984
-  lastFilamentPrintTime: 11027.165216372
+  analysisLastFilamentPrintTime: 41091.0804063751
+  analysisPrintTime: 41095.38528464998
+  compensatedPrintTime: 41304.51158450196
+  firstFilamentPrintTime: 340.904559169
+  lastFilamentPrintTime: 34553.981482323
   payload:
-    name: CE3E3V2_PB_212_LH_RB_Holder.gcode
+    name: CE3E3V2_8x8 Core - Multiboard Border Tile.gcode
     origin: local
     owner: christof
-    path: CE3E3V2_PB_212_LH_RB_Holder.gcode
-    size: 2556950
-    time: 11033.186744530001
-  timestamp: 1691357868.05405
-- analysisFirstFilamentPrintTime: 7.86915632213595
-  analysisLastFilamentPrintTime: 2450.8415640639564
-  analysisPrintTime: 2454.429426732134
-  compensatedPrintTime: 2729.332805713324
+    path: CE3E3V2_8x8 Core - Multiboard Border Tile.gcode
+    size: 26101890
+    time: 34558.011674415
+  timestamp: 1754759951.030626
+- analysisFirstFilamentPrintTime: 7.869156322136405
+  analysisLastFilamentPrintTime: 13607.550826706985
+  analysisPrintTime: 13612.083398824485
+  compensatedPrintTime: 13891.990751980351
+  firstFilamentPrintTime: 112.57081961699998
+  lastFilamentPrintTime: 13939.254471074999
   payload:
-    name: CE3E3V2_9vclip_3m_holes.gcode
+    name: CE3E3V2_Tram-Tool.gcode
     origin: local
     owner: christof
-    path: CE3E3V2_9vclip_3m_holes.gcode
-    size: 707336
-    time: 2800.38078023
-  timestamp: 1691345916.5882049
-version: 2.3.1
+    path: CE3E3V2_Tram-Tool.gcode
+    size: 2255357
+    time: 13945.215146446999
+  timestamp: 1754512747.2508874
+- analysisFirstFilamentPrintTime: 7.869156322136405
+  analysisLastFilamentPrintTime: 13607.551743167616
+  analysisPrintTime: 13612.084315285116
+  compensatedPrintTime: 13951.991940240483
+  firstFilamentPrintTime: 112.54409683200356
+  lastFilamentPrintTime: 13946.32933085
+  payload:
+    name: CE3E3V2_Tram-Tool.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_Tram-Tool.gcode
+    size: 2255369
+    time: 13952.588904318
+  timestamp: 1754445229.0065966
+version: 2.4.0

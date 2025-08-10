@@ -1,16 +1,24 @@
-- current_version: 2023.5.24
-  datetime: '2023-08-01 13:50:25'
+- current_version: 2024.11.12
+  datetime: '2025-07-28 04:23:55'
+  display_name: File Check Plugin
+  release_notes: https://github.com/OctoPrint/OctoPrint-FileCheck/releases/tag/2025.7.23
+  success: true
+  target: file_check
+  target_version: 2025.7.23
+  text: Update successful
+- current_version: 2025.5.14
+  datetime: '2025-07-28 04:24:53'
+  display_name: Firmware Check Plugin
+  release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareCheck/releases/tag/2025.7.23
+  success: true
+  target: firmware_check
+  target_version: 2025.7.23
+  text: Update successful
+- current_version: 2023.10.10
+  datetime: '2025-07-28 04:25:45'
   display_name: Pi Support Plugin
-  release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2023.7.31
+  release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2025.7.23
   success: true
   target: pi_support
-  target_version: 2023.7.31
-  text: Update successful
-- current_version: 0.1.9.4
-  datetime: '2023-08-09 01:33:57'
-  display_name: UI Customizer
-  release_notes: https://github.com/LazeMSS/OctoPrint-UICustomizer/releases/tag/0.1.9.8
-  success: true
-  target: uicustomizer
-  target_version: 0.1.9.8
+  target_version: 2025.7.23
   text: Update successful

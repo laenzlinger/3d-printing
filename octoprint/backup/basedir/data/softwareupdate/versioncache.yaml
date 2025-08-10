@@ -15,26 +15,26 @@ HeaterTimeout:
       value: 0.0.4
   online: true
   possible: true
-  timestamp: 1691534384.5660377
+  timestamp: 1754757475.4544923
 PrintTimeGenius:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: 08fb44e10635c1c3ee3a398c5ff96277
+  hash: 9845ca501d58ef5e158b696f849d11be
   information:
     local:
-      name: 2.3.1
-      value: 2.3.1
+      name: 2.4.0
+      value: 2.4.0
     needs_online: true
     remote:
-      name: '2.3.1: Minor release'
-      release_notes: https://github.com/eyal0/OctoPrint-PrintTimeGenius/releases/tag/2.3.1
-      value: 2.3.1
+      name: 2.4.0
+      release_notes: https://github.com/eyal0/OctoPrint-PrintTimeGenius/releases/tag/2.4.0
+      value: 2.4.0
   online: true
   possible: true
-  timestamp: 1691534384.372699
-__version: 1.9.2
+  timestamp: 1754757475.4850023
+__version: 1.11.2
 active_filters_extended:
   available: false
   compatible: true
@@ -52,25 +52,25 @@ active_filters_extended:
       value: 0.1.0
   online: true
   possible: true
-  timestamp: 1691534384.5161877
+  timestamp: 1754757475.4799128
 bedlevelvisualizer:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: bbdc97929c3b38f1afb78f104f4ad146
+  hash: 59168cbecb0cf2e068db35cd36247635
   information:
     local:
-      name: 1.1.1
-      value: 1.1.1
+      name: 1.1.2
+      value: 1.1.2
     needs_online: true
     remote:
-      name: 1.1.1
-      release_notes: https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/releases/tag/1.1.1
-      value: 1.1.1
+      name: 1.1.2
+      release_notes: https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/releases/tag/1.1.2
+      value: 1.1.2
   online: true
   possible: true
-  timestamp: 1691534384.7837832
+  timestamp: 1754757475.5268147
 eeprom_marlin:
   available: false
   compatible: true
@@ -88,97 +88,115 @@ eeprom_marlin:
       value: 3.3.0
   online: true
   possible: true
-  timestamp: 1691534385.0163941
+  timestamp: 1754757476.204804
 file_check:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: 1fd5482b4fa54235531810fa4bf95620
+  hash: 1fd09fc3c2f8c1aeed388eb17f6ae350
   information:
     local:
-      name: 2021.2.23
-      value: 2021.2.23
+      name: 2025.7.23
+      value: 2025.7.23
     needs_online: true
     remote:
-      name: 2021.2.23
-      release_notes: https://github.com/OctoPrint/OctoPrint-FileCheck/releases/tag/2021.2.23
-      value: 2021.2.23
+      name: 2025.7.23
+      release_notes: https://github.com/OctoPrint/OctoPrint-FileCheck/releases/tag/2025.7.23
+      value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1691534384.7862136
+  timestamp: 1754757475.9752805
 firmware_check:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: 2cc0c5c664767763a036f68d2318d063
+  hash: 8c1d94bd71f0c8577eb5fadcc6f3a899
   information:
     local:
-      name: 2021.10.11
-      value: 2021.10.11
+      name: 2025.7.23
+      value: 2025.7.23
     needs_online: true
     remote:
-      name: 2021.10.11
-      release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareCheck/releases/tag/2021.10.11
-      value: 2021.10.11
+      name: 2025.7.23
+      release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareCheck/releases/tag/2025.7.23
+      value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1691534384.9288533
+  timestamp: 1754757475.9684815
 firmwareupdater:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: b2a1ff63a082b87e4c5c6f5402f4d6b9
+  hash: ab47f6c3749b40366dd8b3c78befe800
   information:
     local:
-      name: 1.14.0
-      value: 1.14.0
+      name: 1.14.1
+      value: 1.14.1
     needs_online: true
     remote:
-      name: 1.14.0
-      release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/releases/tag/1.14.0
-      value: 1.14.0
+      name: 1.14.1
+      release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/releases/tag/1.14.1
+      value: 1.14.1
   online: true
   possible: true
-  timestamp: 1691534385.297501
+  timestamp: 1754757476.1821449
+klipper:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: e9bdcc22951cb8008522554e018033a3
+  information:
+    local:
+      name: 0.3.9.5
+      value: 0.3.9.5
+    needs_online: true
+    remote:
+      name: OctoKlipper 0.3.9.5
+      release_notes: https://github.com/thelastWallE/OctoprintKlipperPlugin/releases/tag/0.3.9.5
+      value: 0.3.9.5
+  online: true
+  possible: true
+  timestamp: 1754836827.6110275
 octoprint:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: 7bcd9636cacd9acae9523a3c70479e61
+  hash: 3c42e2b8f739742d1f6fc497f94663a1
   information:
     local:
-      name: 1.9.2
-      value: 1.9.2
+      name: 1.11.2
+      value: 1.11.2
     needs_online: true
     remote:
-      name: 1.9.2
-      release_notes: https://github.com/OctoPrint/OctoPrint/releases/tag/1.9.2
-      value: 1.9.2
+      name: 1.11.2
+      release_notes: https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.2
+      value: 1.11.2
   online: true
   possible: true
-  timestamp: 1691587040.8303456
+  timestamp: 1754829252.6923301
 pi_support:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: dd90c0aabeb1c16366bc4d1f6b0584cc
+  hash: ea3f2426d78ac9e1efe43928166e7a9f
   information:
     local:
-      name: 2023.7.31
-      value: 2023.7.31
+      name: 2025.7.23
+      value: 2025.7.23
     needs_online: true
     remote:
-      name: 2023.7.31
-      release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2023.7.31
-      value: 2023.7.31
+      name: 2025.7.23
+      release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2025.7.23
+      value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1691534385.0353708
+  timestamp: 1754757476.0776823
 preheat:
   available: false
   compatible: true
@@ -196,40 +214,58 @@ preheat:
       value: 0.8.0
   online: true
   possible: true
-  timestamp: 1691534385.198949
+  timestamp: 1754757476.6050851
 prusaslicerthumbnails:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: b879889664cccb179ae629434b91f50e
+  hash: 2a124112856c98e22730756cd5f03660
   information:
     local:
-      name: 1.0.2
-      value: 1.0.2
+      name: 1.0.8
+      value: 1.0.8
     needs_online: true
     remote:
-      name: 1.0.2
-      release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.0.2
-      value: 1.0.2
+      name: 1.0.8
+      release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.0.8
+      value: 1.0.8
   online: true
   possible: true
-  timestamp: 1691534385.217794
+  timestamp: 1754757476.6845117
+resource_monitor:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 7ae0ddde4af9fed9b8da1859bd0a4daa
+  information:
+    local:
+      name: 0.3.16
+      value: 0.3.16
+    needs_online: true
+    remote:
+      name: 0.3.16
+      release_notes: https://github.com/Renaud11232/OctoPrint-Resource-Monitor/releases/tag/0.3.16
+      value: 0.3.16
+  online: true
+  possible: true
+  timestamp: 1754757476.7104049
 uicustomizer:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: 22d13c8c9b4233d10fc3dfd13327f868
+  hash: c950631d586d8b334ec352886e45ea27
   information:
     local:
-      name: 0.1.9.8
-      value: 0.1.9.8
+      name: 0.1.9.91
+      value: 0.1.9.91
     needs_online: true
     remote:
-      name: 0.1.9.8 - Webcam and gcode fixes
-      release_notes: https://github.com/LazeMSS/OctoPrint-UICustomizer/releases/tag/0.1.9.8
-      value: 0.1.9.8
+      name: 0.1.9.91 - prepare for OP 1.10.0
+      release_notes: https://github.com/LazeMSS/OctoPrint-UICustomizer/releases/tag/0.1.9.91
+      value: 0.1.9.91
   online: true
   possible: true
-  timestamp: 1691537655.9627256
+  timestamp: 1754757476.8580105
