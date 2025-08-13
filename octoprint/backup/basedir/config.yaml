@@ -252,6 +252,8 @@ plugins:
       _name: Default
   gcodeviewer:
     _config_version: 1
+  octoapp:
+    encryptionKey: f16c60c3-9f88-40f4-be80-a2ffec95b293
   pi_support:
     ignore_undervoltage_on_printstart: true
   pluginmanager:
@@ -296,12 +298,6 @@ plugins:
       - false
       - textOnly
       - '#000000'
-    - - tab_plugin_eeprom_marlin_link
-      - true
-      - false
-      - false
-      - textOnly
-      - '#000000'
     - - timelapse_link
       - true
       - false
@@ -314,12 +310,18 @@ plugins:
       - false
       - textOnly
       - '#000000'
+    - - tab_plugin_klipper_main_link
+      - true
+      - false
+      - false
+      - textOnly
+      - '#000000'
     rows:
     - _00#state_wrapper: true
       _01#files_wrapper: true
       _02#sidebar_plugin_firmware_check_warning_wrapper: false
       _03#sidebar_plugin_firmware_check_info_wrapper: false
-      _04#connection_wrapper: true
+      _04#sidebar_plugin_klipper_wrapper: true
     - _00div.UICmainTabs: true
     - _00#UICGcodeVWidget: true
       _01#UICTempWidget: true
@@ -335,6 +337,7 @@ plugins:
     - navbar_plugin_logging_plugintimingslog
     - navbar_plugin_pi_support
     - navbar_plugin_health_check
+    - navbar_plugin_klipper
     widths:
     - '3'
     - '6'

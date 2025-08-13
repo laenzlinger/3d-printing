@@ -15,7 +15,7 @@ HeaterTimeout:
       value: 0.0.4
   online: true
   possible: true
-  timestamp: 1754757475.4544923
+  timestamp: 1755095289.732259
 PrintTimeGenius:
   available: false
   compatible: true
@@ -33,7 +33,7 @@ PrintTimeGenius:
       value: 2.4.0
   online: true
   possible: true
-  timestamp: 1754757475.4850023
+  timestamp: 1755095289.8198044
 __version: 1.11.2
 active_filters_extended:
   available: false
@@ -52,7 +52,7 @@ active_filters_extended:
       value: 0.1.0
   online: true
   possible: true
-  timestamp: 1754757475.4799128
+  timestamp: 1754854499.4298525
 bedlevelvisualizer:
   available: false
   compatible: true
@@ -70,7 +70,7 @@ bedlevelvisualizer:
       value: 1.1.2
   online: true
   possible: true
-  timestamp: 1754757475.5268147
+  timestamp: 1755095289.7944934
 eeprom_marlin:
   available: false
   compatible: true
@@ -88,7 +88,7 @@ eeprom_marlin:
       value: 3.3.0
   online: true
   possible: true
-  timestamp: 1754757476.204804
+  timestamp: 1754854499.434977
 file_check:
   available: false
   compatible: true
@@ -106,7 +106,7 @@ file_check:
       value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1754757475.9752805
+  timestamp: 1755095289.865442
 firmware_check:
   available: false
   compatible: true
@@ -124,7 +124,7 @@ firmware_check:
       value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1754757475.9684815
+  timestamp: 1755095290.3246443
 firmwareupdater:
   available: false
   compatible: true
@@ -142,7 +142,7 @@ firmwareupdater:
       value: 1.14.1
   online: true
   possible: true
-  timestamp: 1754757476.1821449
+  timestamp: 1755095290.6059313
 klipper:
   available: false
   compatible: true
@@ -160,7 +160,25 @@ klipper:
       value: 0.3.9.5
   online: true
   possible: true
-  timestamp: 1754836827.6110275
+  timestamp: 1755095291.071056
+octoapp:
+  available: false
+  compatible: true
+  disabled: false
+  error: null
+  hash: 27ad221cd54d2b7c9e92b0335f7536bc
+  information:
+    local:
+      name: 3.0.1
+      value: 3.0.1
+    needs_online: true
+    remote:
+      name: 3.0.1
+      release_notes: https://github.com/crysxd/OctoApp-Plugin/releases/tag/3.0.1
+      value: 3.0.1
+  online: true
+  possible: true
+  timestamp: 1755095290.6658041
 octoprint:
   available: false
   compatible: true
@@ -178,7 +196,7 @@ octoprint:
       value: 1.11.2
   online: true
   possible: true
-  timestamp: 1754829252.6923301
+  timestamp: 1755095290.1771045
 pi_support:
   available: false
   compatible: true
@@ -196,7 +214,7 @@ pi_support:
       value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1754757476.0776823
+  timestamp: 1755095290.7857423
 preheat:
   available: false
   compatible: true
@@ -214,7 +232,7 @@ preheat:
       value: 0.8.0
   online: true
   possible: true
-  timestamp: 1754757476.6050851
+  timestamp: 1755095290.919366
 prusaslicerthumbnails:
   available: false
   compatible: true
@@ -232,7 +250,7 @@ prusaslicerthumbnails:
       value: 1.0.8
   online: true
   possible: true
-  timestamp: 1754757476.6845117
+  timestamp: 1755095291.6810012
 resource_monitor:
   available: false
   compatible: true
@@ -250,7 +268,7 @@ resource_monitor:
       value: 0.3.16
   online: true
   possible: true
-  timestamp: 1754757476.7104049
+  timestamp: 1755095291.642522
 uicustomizer:
   available: false
   compatible: true
@@ -268,4 +286,4 @@ uicustomizer:
       value: 0.1.9.91
   online: true
   possible: true
-  timestamp: 1754757476.8580105
+  timestamp: 1755095291.8908722
