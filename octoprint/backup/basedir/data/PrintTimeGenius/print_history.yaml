@@ -1,70 +1,72 @@
 print_history:
+- analysisFirstFilamentPrintTime: 1.6449185156561725
+  analysisLastFilamentPrintTime: 5525.28543767075
+  analysisPrintTime: 5525.28543767075
+  compensatedPrintTime: 5788.360583760596
+  firstFilamentPrintTime: 23.543297861999918
+  lastFilamentPrintTime: 4054.4440579310003
+  payload:
+    name: CE3E3V2_endstop-adapter.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_endstop-adapter.gcode
+    size: 1947595
+    time: 4058.071088281
+  timestamp: 1755608963.030693
+- analysisFirstFilamentPrintTime: 0.7456656519061653
+  analysisLastFilamentPrintTime: 30242.219046852442
+  analysisPrintTime: 30242.219046852442
+  compensatedPrintTime: 30539.90797619104
+  firstFilamentPrintTime: 160.22432962300002
+  lastFilamentPrintTime: 19627.269836916003
+  payload:
+    name: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
+    size: 25652110
+    time: 19630.654628441003
+  timestamp: 1755541564.606745
+- analysisFirstFilamentPrintTime: 1.672620104250882
+  analysisLastFilamentPrintTime: 1896.0368020333724
+  analysisPrintTime: 1896.0368020333724
+  compensatedPrintTime: 2187.823813803372
+  firstFilamentPrintTime: 318.77364242699696
+  lastFilamentPrintTime: 1758.4036131360044
+  payload:
+    name: CE3E3V2_square.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_square.gcode
+    size: 369338
+    time: 1761.9609073190077
+  timestamp: 1755336848.2194219
+- analysisFirstFilamentPrintTime: 0.7456656519061653
+  analysisLastFilamentPrintTime: 30424.526974158605
+  analysisPrintTime: 30424.526974158605
+  compensatedPrintTime: 30710.43659517103
+  firstFilamentPrintTime: 310.44512482199934
+  lastFilamentPrintTime: 20062.869044430998
+  payload:
+    name: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
+    size: 26135303
+    time: 20066.296587113
+  timestamp: 1755313150.664061
 - analysisFirstFilamentPrintTime: 0.6638570687609899
   analysisLastFilamentPrintTime: 29951.51908440171
   analysisPrintTime: 29951.51908440171
   compensatedPrintTime: 30102.708176521744
+  firstFilamentPrintTime: 255.4750025200001
+  lastFilamentPrintTime: 19469.778729969
   payload:
     name: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
     origin: local
     owner: christof
     path: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
     size: 26104893
-    time: 19507.588368711993
-  timestamp: 1754965004.333213
-- analysisFirstFilamentPrintTime: 0.6638570687609899
-  analysisLastFilamentPrintTime: 29951.51908440171
-  analysisPrintTime: 29951.51908440171
-  compensatedPrintTime: 30102.708176521744
-  firstFilamentPrintTime: 285.3011078039999
-  lastFilamentPrintTime: 19498.65429689399
-  payload:
-    name: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    origin: local
-    owner: christof
-    path: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    size: 26104893
-    time: 19502.240767908996
-  timestamp: 1754940662.791448
-- analysisFirstFilamentPrintTime: 0.6638570687609899
-  analysisLastFilamentPrintTime: 29951.51908440171
-  analysisPrintTime: 29951.51908440171
-  compensatedPrintTime: 30102.708176521744
-  firstFilamentPrintTime: 104.11061849899852
-  lastFilamentPrintTime: 19317.468515837005
-  payload:
-    name: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    origin: local
-    owner: christof
-    path: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    size: 26104893
-    time: 19321.057250244005
-  timestamp: 1754913256.9111218
-- analysisFirstFilamentPrintTime: 0.6638570687609899
-  analysisLastFilamentPrintTime: 29951.51908440171
-  analysisPrintTime: 29951.51908440171
-  compensatedPrintTime: 30102.708176521744
-  firstFilamentPrintTime: 279.27008401700004
-  lastFilamentPrintTime: 19492.880175794002
-  payload:
-    name: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    origin: local
-    owner: christof
-    path: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    size: 26104893
-    time: 19496.483531013
-  timestamp: 1754878459.6118395
-- analysisFirstFilamentPrintTime: 0.6638570687609899
-  analysisLastFilamentPrintTime: 29951.51908440171
-  analysisPrintTime: 29951.51908440171
-  compensatedPrintTime: 30102.708176521744
-  firstFilamentPrintTime: 22.44602312699999
-  lastFilamentPrintTime: 19250.671705189
-  payload:
-    name: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    origin: local
-    owner: christof
-    path: CE3E3V2_8x8 MU Multiboard Core Tile.gcode
-    size: 26104893
-    time: 19254.043849167
-  timestamp: 1754857051.6871004
+    time: 19473.371260609
+  timestamp: 1755282231.4420261
 version: 2.4.0

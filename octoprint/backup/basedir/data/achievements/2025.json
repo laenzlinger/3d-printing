@@ -1,30 +1,30 @@
 {
   "last_version": "1.11.2",
   "seen_versions": 5,
-  "server_starts": 103,
-  "prints_started": 186,
+  "server_starts": 107,
+  "prints_started": 206,
   "prints_cancelled": 0,
   "prints_errored": 0,
-  "prints_finished": 147,
+  "prints_finished": 155,
   "prints_started_per_weekday": {
-    "4": 23,
-    "5": 35,
+    "4": 26,
+    "5": 49,
     "6": 55,
-    "0": 30,
-    "1": 28,
+    "0": 31,
+    "1": 29,
     "2": 10,
-    "3": 5
+    "3": 6
   },
-  "print_duration_total": 1614420.638208057,
+  "print_duration_total": 1827708.3181064494,
   "print_duration_cancelled": 0.0,
   "print_duration_errored": 0.0,
-  "print_duration_finished": 1476246.3373503822,
+  "print_duration_finished": 1599792.7326166825,
   "longest_print_duration": 51842.992892199996,
   "longest_print_date": 1734516665,
-  "files_uploaded": 146,
-  "files_deleted": 90,
+  "files_uploaded": 157,
+  "files_deleted": 96,
   "plugins_installed": 2,
   "plugins_uninstalled": 2,
   "most_plugins": 34,
-  "achievements": 19
+  "achievements": 20
 }
