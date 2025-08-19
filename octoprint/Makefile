@@ -6,7 +6,7 @@ backup:
 	ssh octo@octo '/home/octo/oprint/bin/octoprint plugins backup:backup --path /tmp/backup.zip --exclude uploads --exclude timelapse'
 	scp octo@octo:/tmp/backup.zip ./backup.zip
 	unzip backup.zip -d backup
-	scp octo@octo:/home/octo/printer.cfg ./backup/printer.cfg
+	scp octo@octo:/home/octo/printer.cfg ../ender3.v2.neo/printer.cfg
 	rm backup.zip
 
 help:
