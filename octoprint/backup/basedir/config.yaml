@@ -12,15 +12,15 @@ plugins:
     _config_version: 1
     channels:
       _blog:
-        read_until: 1754292600
+        read_until: 1765879200
       _important:
         read_until: 1698310200
       _octopi:
         read_until: 1746515700
       _plugins:
-        read_until: 1752364800
+        read_until: 1765324800
       _releases:
-        read_until: 1749553200
+        read_until: 1764593700
   bedlevelvisualizer:
     _config_version: 1
     command: "@BEDLEVELVISUALIZER\t; instruct plugin to start recording responses\
@@ -232,7 +232,6 @@ plugins:
     stored_mesh_z_height: 259
   classicwebcam:
     _config_version: 1
-    flipV: true
     snapshot: http://127.0.0.1:8080/?action=snapshot
     stream: /webcam/?action=stream
     streamRatio: '4:3'
