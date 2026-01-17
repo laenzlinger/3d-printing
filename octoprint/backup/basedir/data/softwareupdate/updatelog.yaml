@@ -1,27 +1,3 @@
-- current_version: 2024.11.12
-  datetime: '2025-07-28 04:23:55'
-  display_name: File Check Plugin
-  release_notes: https://github.com/OctoPrint/OctoPrint-FileCheck/releases/tag/2025.7.23
-  success: true
-  target: file_check
-  target_version: 2025.7.23
-  text: Update successful
-- current_version: 2025.5.14
-  datetime: '2025-07-28 04:24:53'
-  display_name: Firmware Check Plugin
-  release_notes: https://github.com/OctoPrint/OctoPrint-FirmwareCheck/releases/tag/2025.7.23
-  success: true
-  target: firmware_check
-  target_version: 2025.7.23
-  text: Update successful
-- current_version: 2023.10.10
-  datetime: '2025-07-28 04:25:45'
-  display_name: Pi Support Plugin
-  release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2025.7.23
-  success: true
-  target: pi_support
-  target_version: 2025.7.23
-  text: Update successful
 - current_version: 1.11.2
   datetime: '2026-01-03 11:45:25'
   display_name: OctoPrint
@@ -45,4 +21,20 @@
   success: true
   target: prusaslicerthumbnails
   target_version: 1.2.0
+  text: Update successful
+- current_version: 1.2.0
+  datetime: '2026-01-04 14:30:35'
+  display_name: Slicer Thumbnails
+  release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.2.1
+  success: true
+  target: prusaslicerthumbnails
+  target_version: 1.2.1
+  text: Update successful
+- current_version: 1.2.1
+  datetime: '2026-01-18 00:01:31'
+  display_name: Slicer Thumbnails
+  release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.2.2
+  success: true
+  target: prusaslicerthumbnails
+  target_version: 1.2.2
   text: Update successful

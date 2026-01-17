@@ -15,7 +15,7 @@ HeaterTimeout:
       value: 0.0.4
   online: true
   possible: true
-  timestamp: 1767437181.2239153
+  timestamp: 1768690695.3557727
 PrintTimeGenius:
   available: false
   compatible: true
@@ -33,7 +33,7 @@ PrintTimeGenius:
       value: 2.4.0
   online: true
   possible: true
-  timestamp: 1767437181.230937
+  timestamp: 1768690695.37177
 __version: 1.11.5
 bedlevelvisualizer:
   available: false
@@ -52,7 +52,7 @@ bedlevelvisualizer:
       value: 1.1.2
   online: true
   possible: true
-  timestamp: 1767437181.2376225
+  timestamp: 1768690695.3666594
 file_check:
   available: false
   compatible: true
@@ -70,7 +70,7 @@ file_check:
       value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1767437181.2172189
+  timestamp: 1768690695.3642247
 firmware_check:
   available: false
   compatible: true
@@ -88,7 +88,7 @@ firmware_check:
       value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1767437181.5792236
+  timestamp: 1768690695.667149
 firmwareupdater:
   available: false
   compatible: true
@@ -106,7 +106,7 @@ firmwareupdater:
       value: 1.14.1
   online: true
   possible: true
-  timestamp: 1767437181.7680998
+  timestamp: 1768690695.6833272
 klipper:
   available: false
   compatible: true
@@ -124,7 +124,7 @@ klipper:
       value: 0.3.9.5
   online: true
   possible: true
-  timestamp: 1767437181.938073
+  timestamp: 1768690695.8239858
 octoapp:
   available: false
   compatible: true
@@ -142,7 +142,7 @@ octoapp:
       value: 3.0.4
   online: true
   possible: true
-  timestamp: 1767437181.7508595
+  timestamp: 1768690695.697717
 octoprint:
   available: false
   compatible: true
@@ -160,7 +160,7 @@ octoprint:
       value: 1.11.5
   online: true
   possible: true
-  timestamp: 1767437181.2393744
+  timestamp: 1768690695.3768077
 pi_support:
   available: false
   compatible: true
@@ -178,7 +178,7 @@ pi_support:
       value: 2025.7.23
   online: true
   possible: true
-  timestamp: 1767437181.683409
+  timestamp: 1768690695.6565201
 preheat:
   available: false
   compatible: true
@@ -196,25 +196,25 @@ preheat:
       value: 0.8.0
   online: true
   possible: true
-  timestamp: 1767437182.0272837
+  timestamp: 1768690695.9341884
 prusaslicerthumbnails:
   available: false
   compatible: true
   disabled: false
   error: null
-  hash: aafce395758dd99989fe141c0b303d02
+  hash: 46d2c8cf0e478621c043a1de0510a871
   information:
     local:
-      name: 1.2.0
-      value: 1.2.0
+      name: 1.2.2
+      value: 1.2.2
     needs_online: true
     remote:
-      name: 1.2.0
-      release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.2.0
-      value: 1.2.0
+      name: 1.2.2
+      release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.2.2
+      value: 1.2.2
   online: true
   possible: true
-  timestamp: 1767437182.1824226
+  timestamp: 1768690911.3240504
 resource_monitor:
   available: false
   compatible: true
@@ -232,7 +232,7 @@ resource_monitor:
       value: 0.3.16
   online: true
   possible: true
-  timestamp: 1767437182.2643476
+  timestamp: 1768690696.0106606
 uicustomizer:
   available: false
   compatible: true
@@ -250,4 +250,4 @@ uicustomizer:
       value: 0.1.9.91
   online: true
   possible: true
-  timestamp: 1767437182.2880967
+  timestamp: 1768690696.0120142
