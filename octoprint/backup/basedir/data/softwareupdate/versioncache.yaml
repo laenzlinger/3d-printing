@@ -148,7 +148,7 @@ octoprint:
   compatible: true
   disabled: false
   error: null
-  hash: 5c3e2ba9bbf10601565be9db86b0c301
+  hash: 4b65599eb61863ed72dc81e78c5cc633
   information:
     local:
       name: 1.11.5
@@ -160,7 +160,7 @@ octoprint:
       value: 1.11.5
   online: true
   possible: true
-  timestamp: 1768690695.3768077
+  timestamp: 1768740626.2664082
 pi_support:
   available: false
   compatible: true

@@ -1,6 +1,11 @@
 /:
-- _count: 42
-  _timestamp: 1768690936.1092873
+- _count: 44
+  _timestamp: 1768746794.3979075
   base_url: https://3d.laenzlinger.net/
+  path: /
+  query_string: l10n=en
+- _count: 6
+  _timestamp: 1768745613.803136
+  base_url: http://3d.home/
   path: /
   query_string: l10n=en

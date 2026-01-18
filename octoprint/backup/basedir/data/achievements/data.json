@@ -2,7 +2,7 @@
   "stats": {
     "last_version": "1.11.5",
     "seen_versions": 6,
-    "server_starts": 120,
+    "server_starts": 125,
     "prints_started": 243,
     "prints_cancelled": 0,
     "prints_errored": 0,
