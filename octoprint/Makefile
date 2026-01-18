@@ -12,7 +12,7 @@ PRINTER_CFG_DST := ../ender3.v2.neo/printer.cfg
 
 backup: ## backup octoprint and printer configuration
 	rm -rf backup
-	ssh $(SSH) '/home/octo/oprint/bin/octoprint plugins backup:backup --path /tmp/backup.zip --exclude uploads --exclude timelapse'
+	ssh $(SSH) '~/oprint/bin/octoprint plugins backup:backup --path /tmp/backup.zip --exclude uploads --exclude timelapse'
 	scp $(SSH):/tmp/backup.zip ./backup.zip
 	unzip backup.zip -d backup
 	rm backup.zip
