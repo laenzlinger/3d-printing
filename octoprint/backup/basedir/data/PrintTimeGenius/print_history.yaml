@@ -1,0 +1,72 @@
+print_history:
+- analysisFirstFilamentPrintTime: 1.526224991070194
+  analysisLastFilamentPrintTime: 14092.536895092766
+  analysisPrintTime: 14092.536895092766
+  compensatedPrintTime: 14311.1825276847
+  firstFilamentPrintTime: 327.438298634
+  lastFilamentPrintTime: 10929.029523048
+  payload:
+    name: CE3E3V2_SkiHolderV2_FullPrint.gcode
+    origin: local
+    owner: mathis
+    path: CE3E3V2_SkiHolderV2_FullPrint.gcode
+    size: 6537138
+    time: 10932.132171989
+  timestamp: 1768500866.3067236
+- analysisFirstFilamentPrintTime: 1.156413588389114
+  analysisLastFilamentPrintTime: 36399.158167887406
+  analysisPrintTime: 36399.158167887406
+  compensatedPrintTime: 36617.03574722202
+  firstFilamentPrintTime: 329.18746802400005
+  lastFilamentPrintTime: 27042.992776768
+  payload:
+    name: CE3E3V2_SkiHolderV2_FullPrint.gcode
+    origin: local
+    owner: mathis
+    path: CE3E3V2_SkiHolderV2_FullPrint.gcode
+    size: 31889156
+    time: 27046.378179041
+  timestamp: 1768366913.419546
+- analysisFirstFilamentPrintTime: 1.7234128422960566
+  analysisLastFilamentPrintTime: 4310.967754417977
+  analysisPrintTime: 4310.967754417977
+  compensatedPrintTime: 4528.000760903881
+  firstFilamentPrintTime: 333.855009817009
+  lastFilamentPrintTime: 3474.357459421997
+  payload:
+    name: CE3E3V2_GrailVariaSeatpost.gcode
+    origin: local
+    owner: mathis
+    path: CE3E3V2_GrailVariaSeatpost.gcode
+    size: 3825910
+    time: 3479.9282532490033
+  timestamp: 1768330874.316536
+- analysisFirstFilamentPrintTime: 0.8671978767233668
+  analysisLastFilamentPrintTime: 83629.37876940782
+  analysisPrintTime: 83629.56968263465
+  compensatedPrintTime: 83892.4881130429
+  firstFilamentPrintTime: 35.48977103600191
+  lastFilamentPrintTime: 66096.46222851
+  payload:
+    name: CE3E3V2_kickr_core_v2_rocker_feet_slim.gcode
+    origin: local
+    owner: mathis
+    path: CE3E3V2_kickr_core_v2_rocker_feet_slim.gcode
+    size: 82434391
+    time: 66100.186300272
+  timestamp: 1768319136.938138
+- analysisFirstFilamentPrintTime: 1.5281170344460406
+  analysisLastFilamentPrintTime: 27558.442920148358
+  analysisPrintTime: 27558.633833375192
+  compensatedPrintTime: 27855.847347196315
+  firstFilamentPrintTime: 167.69097898399923
+  lastFilamentPrintTime: 22100.540557671
+  payload:
+    name: CE3E3V2_kickr-core-v2-tennis-ball.gcode
+    origin: local
+    owner: christof
+    path: CE3E3V2_kickr-core-v2-tennis-ball.gcode
+    size: 27768583
+    time: 22104.375559559998
+  timestamp: 1768247974.8461828
+version: 2.4.0

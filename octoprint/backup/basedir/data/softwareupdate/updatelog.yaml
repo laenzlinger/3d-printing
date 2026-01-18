@@ -1,0 +1,40 @@
+- current_version: 1.11.2
+  datetime: '2026-01-03 11:45:25'
+  display_name: OctoPrint
+  release_notes: https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.5
+  success: true
+  target: octoprint
+  target_version: 1.11.5
+  text: Update successful
+- current_version: 3.0.1
+  datetime: '2026-01-03 11:45:46'
+  display_name: OctoApp
+  release_notes: https://github.com/crysxd/OctoApp-Plugin/releases/tag/3.0.4
+  success: true
+  target: octoapp
+  target_version: 3.0.4
+  text: Update successful
+- current_version: 1.0.8
+  datetime: '2026-01-03 11:46:01'
+  display_name: Slicer Thumbnails
+  release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.2.0
+  success: true
+  target: prusaslicerthumbnails
+  target_version: 1.2.0
+  text: Update successful
+- current_version: 1.2.0
+  datetime: '2026-01-04 14:30:35'
+  display_name: Slicer Thumbnails
+  release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.2.1
+  success: true
+  target: prusaslicerthumbnails
+  target_version: 1.2.1
+  text: Update successful
+- current_version: 1.2.1
+  datetime: '2026-01-18 00:01:31'
+  display_name: Slicer Thumbnails
+  release_notes: https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails/releases/tag/1.2.2
+  success: true
+  target: prusaslicerthumbnails
+  target_version: 1.2.2
+  text: Update successful
