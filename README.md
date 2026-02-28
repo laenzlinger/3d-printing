@@ -15,6 +15,18 @@ make deploy       # Deploy config to printer
 make logs         # View Klipper logs
 ```
 
+## Git Hooks
+
+Run once after cloning:
+```bash
+./scripts/setup-git-hooks.sh
+```
+
+Pre-commit hooks check:
+- Printer config syntax
+- Cura profile structure
+- No temp files committed
+
 ## Creality Ender 3 V2 Neo
 
 ### System Access
