@@ -1,0 +1,33 @@
+_version: 2
+christof:
+  active: true
+  apikey: null
+  groups:
+  - users
+  - admins
+  password: $argon2id$v=19$m=65536,t=3,p=4$KQWgdK7VGuMcI6RUqhXi3A$CQBq7u+RyCmg3GPbyw16SiBdBvsva42E9EfcZaVldTo
+  permissions: []
+  roles:
+  - user
+  - admin
+  settings: {}
+mathis:
+  active: true
+  apikey: null
+  groups:
+  - users
+  password: $argon2id$v=19$m=65536,t=3,p=4$YAwBoPS+t9Y6Z2ztPee8lw$83ZGbU60eqKSugSnZQs+jOXRBAxSC5lyufwTeyxEC+Y
+  permissions: []
+  roles:
+  - user
+  settings: {}
+salomon:
+  active: true
+  apikey: null
+  groups:
+  - users
+  password: $argon2id$v=19$m=65536,t=3,p=4$k7L2PscYo7T2PocQAqDU+g$oBA1NNgJr8ACauuIGngmtOf7lenPno0Hnc/Vb60OrS0
+  permissions: []
+  roles:
+  - user
+  settings: {}

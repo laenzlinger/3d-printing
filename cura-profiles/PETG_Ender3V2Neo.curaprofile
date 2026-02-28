@@ -1,0 +1,44 @@
+[general]
+version = 4
+name = PETG - Ender 3 V2 Neo
+definition = creality_ender3
+
+[metadata]
+type = quality_changes
+quality_type = normal
+setting_version = 22
+
+[values]
+adhesion_type = brim
+brim_width = 8
+layer_height = 0.2
+layer_height_0 = 0.28
+line_width = 0.4
+initial_layer_line_width_factor = 120
+wall_thickness = 1.2
+top_layers = 5
+bottom_layers = 5
+infill_sparse_density = 20
+infill_pattern = grid
+speed_print = 50
+speed_infill = 60
+speed_wall = 40
+speed_wall_0 = 30
+speed_layer_0 = 20
+speed_travel = 150
+retraction_enable = True
+retraction_amount = 1.5
+retraction_speed = 30
+retraction_hop_enabled = True
+retraction_hop = 0.3
+cool_fan_enabled = True
+cool_fan_speed = 40
+cool_fan_speed_0 = 0
+cool_fan_full_at_height = 0.8
+material_print_temperature = 240
+material_print_temperature_layer_0 = 240
+material_bed_temperature = 80
+material_bed_temperature_layer_0 = 80
+machine_start_gcode = START_PRINT BED_TEMP={material_bed_temperature_layer_0} EXTRUDER_TEMP={material_print_temperature_layer_0}
+machine_end_gcode = END_PRINT
+

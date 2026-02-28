@@ -4,7 +4,7 @@ $fn = 100;
 ff = 0.02;
 
 font = "Allerta Stencil";
-label_text = "Basmatireis";
+label_text = "Suppennudeln";
 outer_radius = 37.5;
 inner_radius = 14;
 font_size = 12;

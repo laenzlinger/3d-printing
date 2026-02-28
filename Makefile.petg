@@ -1,0 +1,30 @@
+.PHONY: petg-preheat petg-pid-tune petg-test
+
+# PETG tuning targets
+petg-preheat: ## Preheat printer for PETG (240°C/80°C)
+	@echo "Preheating for PETG..."
+	@ssh $(PRINTER) 'echo "M140 S80\nM104 S240\nM190 S80\nM109 S240" > /tmp/preheat.gcode && cat /tmp/preheat.gcode'
+	@echo "Run this in Fluidd console or use PETG_PREHEAT macro"
+
+petg-pid-tune: ## Run PID tuning for PETG temperatures
+	@echo "PID tuning for PETG (240°C hotend, 80°C bed)..."
+	@echo "This will take 5-10 minutes. Monitor in Fluidd."
+	@echo ""
+	@echo "Run these commands in Fluidd console:"
+	@echo "  PID_CALIBRATE HEATER=extruder TARGET=240"
+	@echo "  PID_CALIBRATE HEATER=heater_bed TARGET=80"
+	@echo "  SAVE_CONFIG"
+
+petg-test: ## Show PETG test print checklist
+	@echo "PETG Testing Checklist:"
+	@echo ""
+	@echo "1. Dry filament (65°C for 4-6 hours if needed)"
+	@echo "2. Run: make petg-pid-tune"
+	@echo "3. Clean bed with IPA, apply glue stick"
+	@echo "4. Home and bed mesh: G28, BED_MESH_CALIBRATE"
+	@echo "5. First layer test - adjust Z offset"
+	@echo "6. Print temperature tower (230-250°C)"
+	@echo "7. Print retraction test"
+	@echo "8. Small test print"
+	@echo ""
+	@echo "See PETG-GUIDE.md for detailed instructions"
