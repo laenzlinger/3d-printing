@@ -49,7 +49,7 @@ verify: ## Compare source with live printer config
 		exit 1; \
 	fi
 
-deploy: ## Deploy configuration to printer
+deploy: check-calibration ## Deploy configuration to printer
 	@echo "Deploying configuration to printer..."
 	rsync -av --exclude='*.bak' --exclude='*.bkp' $(SOURCE_CONFIG)/ $(PRINTER):~/$(CONFIG_DIR)/
 	@echo "Restarting Klipper..."
@@ -58,6 +58,36 @@ deploy: ## Deploy configuration to printer
 	@echo "Checking status..."
 	@ssh $(PRINTER) "systemctl status klipper --no-pager -l 0"
 	@echo "✓ Deployment complete!"
+
+check-calibration: ## Check if deploy would overwrite newer calibration data
+	@echo "Checking for calibration data changes..."
+	@ssh $(PRINTER) "cat ~/$(CONFIG_DIR)/printer.cfg" > /tmp/live-printer.cfg
+	@live_cal=$$(sed -n '/^#\*#/,$$p' /tmp/live-printer.cfg); \
+	local_cal=$$(sed -n '/^#\*#/,$$p' $(SOURCE_CONFIG)/printer.cfg); \
+	if [ "$$live_cal" != "$$local_cal" ]; then \
+		echo "⚠ WARNING: Printer has different calibration data (PID/z_offset/bed mesh):"; \
+		diff -u <(echo "$$local_cal") <(echo "$$live_cal") || true; \
+		echo ""; \
+		read -p "Overwrite printer calibration? [y/N/m=merge] " confirm; \
+		if [ "$$confirm" = "m" ] || [ "$$confirm" = "M" ]; then \
+			echo "Merging: local config + printer calibration data..."; \
+			sed '/^#\*#/,$$d' $(SOURCE_CONFIG)/printer.cfg > /tmp/deploy-merged.cfg; \
+			echo "" >> /tmp/deploy-merged.cfg; \
+			sed -n '/^#\*#/,$$p' /tmp/live-printer.cfg >> /tmp/deploy-merged.cfg; \
+			rsync -av /tmp/deploy-merged.cfg $(PRINTER):~/$(CONFIG_DIR)/printer.cfg; \
+			cp /tmp/deploy-merged.cfg $(SOURCE_CONFIG)/printer.cfg; \
+			ssh $(PRINTER) "sudo systemctl restart klipper"; \
+			sleep 3; \
+			ssh $(PRINTER) "systemctl status klipper --no-pager -l 0"; \
+			echo "✓ Merged and deployed"; \
+			exit 0; \
+		elif [ "$$confirm" != "y" ] && [ "$$confirm" != "Y" ]; then \
+			echo "✗ Deploy aborted. Run 'make sync-from-live' to pull latest calibration first."; \
+			exit 1; \
+		fi; \
+	else \
+		echo "✓ Calibration data in sync"; \
+	fi
 
 status: ## Check printer system status
 	@ssh $(PRINTER) "systemctl status klipper moonraker crowsnest --no-pager -l 0"

@@ -27,6 +27,11 @@ Pre-commit hooks check:
 - Cura profile structure
 - No temp files committed
 
+## TODO
+
+- [ ] Extend start gcode purge line (current line is too short for consistent priming)
+- [ ] Tune PETG retraction and feed settings (stringing/blob issues)
+
 ## Creality Ender 3 V2 Neo
 
 ### System Access
