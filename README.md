@@ -3,8 +3,11 @@
 Documentation for maintaining a Creality Ender 3 V2 Neo with Klipper firmware.
 
 **Documentation:**
-- [MAINTENANCE.md](MAINTENANCE.md) - System information and AI-assisted maintenance guide
-- [GITOPS.md](GITOPS.md) - GitOps workflow for configuration management
+- [docs/maintenance.md](docs/maintenance.md) - System information and AI-assisted maintenance guide
+- [docs/gitops.md](docs/gitops.md) - GitOps workflow for configuration management
+- [docs/petg-guide.md](docs/petg-guide.md) - PETG printing guide and troubleshooting
+- [docs/cura-petg-profile.md](docs/cura-petg-profile.md) - Cura profile setup for PETG
+- [docs/session-notes.md](docs/session-notes.md) - Print session notes and tuning history
 
 **Quick Commands:**
 ```bash
