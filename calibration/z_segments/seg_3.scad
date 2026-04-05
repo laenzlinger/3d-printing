@@ -1,16 +1,12 @@
 $fn = 64;
-r = 50;
-gap = 2;
-angle_start = 3 * 45 + gap/2;
-angle_mid = 3 * 45 + 22.5;
-
-// Segment base
-rotate([0, 0, angle_start])
-    rotate_extrude(angle = 45 - gap)
-        translate([5, 0]) square([r - 5, 0.4]);
-
-// Label raised
-translate([cos(angle_mid) * 30, sin(angle_mid) * 30, 0.4])
-    rotate([0, 0, angle_mid - 90])
-        linear_extrude(0.2)
-            text("-25", size = 5, halign = "center", valign = "center");
+translate([100, 110, 0])
+difference() {
+    rotate([0, 0, 136])
+        rotate_extrude(angle = 43)
+            translate([20, 0]) square([30, 2]);
+    
+    translate([cos(157.5) * 35, sin(157.5) * 35, -0.1])
+        rotate([0, 0, 157.5 - 90])
+            linear_extrude(2.2)
+                text("-25", size = 5, halign = "center", valign = "center");
+}
