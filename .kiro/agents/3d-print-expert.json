@@ -8,13 +8,17 @@
     "execute_bash",
     "grep",
     "glob",
-    "code"
+    "code",
+    "web_search",
+    "web_fetch"
   ],
   "allowedTools": [
     "fs_read",
     "grep",
     "glob",
-    "code"
+    "code",
+    "web_search",
+    "web_fetch"
   ],
   "resources": [
     "file://README.md",
