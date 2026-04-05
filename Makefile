@@ -129,6 +129,9 @@ slice-upload: ## Slice and upload: make slice-upload STL=file.stl
 slice-print: ## Slice, upload and start: make slice-print STL=file.stl
 	@./scripts/slice.sh -s $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
 
+first-layer-test: ## Print first layer test patches across the bed
+	@./scripts/slice.sh -s calibration/first_layer_patches.stl
+
 profiles: ## List available slicer profiles
 	@./scripts/slice.sh --list
 
