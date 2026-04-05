@@ -3,17 +3,62 @@
     "name": "SUNLU PLA Matte @Ender3V2Neo",
     "inherits": "Generic PLA @System",
     "from": "User",
-    "filament_id": ["SUNLU_PLA_Matte"],
-    "filament_vendor": ["SUNLU"],
-    "nozzle_temperature": [200],
-    "nozzle_temperature_initial_layer": [200],
-    "hot_plate_temp": [60],
-    "hot_plate_temp_initial_layer": [60],
-    "fan_max_speed": [100],
-    "fan_min_speed": [100],
-    "close_fan_the_first_x_layers": [1],
-    "filament_retraction_length": [1.5],
-    "filament_retraction_speed": [30],
-    "filament_z_hop": [0.3],
-    "filament_z_hop_types": ["Normal Lift"]
+    "filament_id": [
+        "SUNLU_PLA_Matte"
+    ],
+    "filament_vendor": [
+        "SUNLU"
+    ],
+    "nozzle_temperature": [
+        "200"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "200"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
+    ],
+    "close_fan_the_first_x_layers": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "filament_z_hop": [
+        "0.3"
+    ],
+    "filament_z_hop_types": [
+        "Normal Lift"
+    ],
+    "instantiation": "true",
+    "cool_plate_temp": [
+        "60"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "60"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "eng_plate_temp": [
+        "60"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "60"
+    ]
 }
