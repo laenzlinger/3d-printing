@@ -25,5 +25,11 @@
     ],
     "skirt_loops": "3",
     "skirt_distance": "5",
-    "skirt_height": "1"
+    "skirt_height": "1",
+    "default_acceleration": "2500",
+    "inner_wall_acceleration": "2000",
+    "outer_wall_acceleration": "1000",
+    "initial_layer_acceleration": "500",
+    "top_surface_acceleration": "1000",
+    "travel_acceleration": "3000"
 }
