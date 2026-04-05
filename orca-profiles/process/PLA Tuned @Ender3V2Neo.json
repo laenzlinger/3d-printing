@@ -17,8 +17,8 @@
     "bottom_shell_layers": "5",
     "sparse_infill_density": "15%",
     "sparse_infill_pattern": "grid",
-    "brim_type": "no_brim",
-    "brim_width": "10",
+    "brim_type": "outer_only",
+    "brim_width": "8",
     "instantiation": "true",
     "compatible_printers": [
         "Creality Ender-3 V2 Neo 0.4 nozzle"
