@@ -120,6 +120,18 @@ ssh: ## SSH into printer
 monitor: ## Monitor current print progress
 	@./scripts/monitor-print.py
 
+slice: ## Slice STL: make slice STL=file.stl [MATERIAL=name] [PROCESS=name]
+	@./scripts/slice.sh $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
+
+slice-upload: ## Slice and upload: make slice-upload STL=file.stl
+	@./scripts/slice.sh -u $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
+
+slice-print: ## Slice, upload and start: make slice-print STL=file.stl
+	@./scripts/slice.sh -s $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
+
+profiles: ## List available slicer profiles
+	@./scripts/slice.sh --list
+
 monitor-simple: ## Monitor print (simple text output)
 	@watch -n 10 'ssh $(PRINTER) "curl -s \"http://localhost:7125/printer/objects/query?print_stats&extruder&heater_bed&display_status\" | python3 -c \"import sys,json; d=json.load(sys.stdin)[\"result\"][\"status\"]; ps=d[\"print_stats\"]; e=d[\"extruder\"]; b=d[\"heater_bed\"]; ds=d.get(\"display_status\",{}); print(f\\\"State: {ps[\\\"state\\\"]} | Progress: {ds.get(\\\"progress\\\",0)*100:.1f}%\\\"); print(f\\\"File: {ps.get(\\\"filename\\\",\\\"N/A\\\")}\\\"); print(f\\\"Hotend: {e[\\\"temperature\\\"]:.1f}°C/{e[\\\"target\\\"]:.0f}°C | Bed: {b[\\\"temperature\\\"]:.1f}°C/{b[\\\"target\\\"]:.0f}°C\\\")\""'
 

@@ -2,13 +2,7 @@
     "type": "filament",
     "name": "Elegoo PLA @Ender3V2Neo",
     "inherits": "Generic PLA @System",
-    "from": "User",
-    "filament_id": [
-        "Elegoo_PLA"
-    ],
-    "filament_vendor": [
-        "Elegoo"
-    ],
+    "from": "system",
     "nozzle_temperature": [
         "200"
     ],
