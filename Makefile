@@ -132,6 +132,9 @@ slice-print: ## Slice, upload and start: make slice-print STL=file.stl
 first-layer-test: ## Print first layer test patches across the bed
 	@./scripts/slice.sh -s calibration/first_layer_patches.stl
 
+z-calibrate: ## Run Z-offset calibration (8 segments with labels)
+	@./scripts/z-calibrate.sh
+
 profiles: ## List available slicer profiles
 	@./scripts/slice.sh --list
 
