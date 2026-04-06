@@ -26,12 +26,10 @@
 - **Z-offset:** 1.985mm (adjusted -0.05mm from baseline 1.935mm)
 - **Test cube:** 20mm cube printed successfully
 
-### Bed Mesh Issues ⚠️
-- **Problem:** Magnetic bed is warped with 0.24mm variation
-- **Worst area:** Right edge (0.275mm spike at position [6,3])
-- **Good area:** Left/center of bed (0.03-0.14mm range)
-- **Solution needed:** Order new magnetic PEI bed (235x235mm)
-- **Workaround:** Position parts on left/center, avoid right edge
+### Bed Upgrade ✅
+- **Old bed:** Magnetic bed was warped with 0.24mm variation (replaced 2026-04-06)
+- **New bed:** Magnetic PEI bed (235x235mm) installed
+- **TODO:** Run fresh bed mesh calibration (`make petg-bed-mesh`), verify Z-offset, test print
 
 ### Cura Profiles Created
 
@@ -83,7 +81,7 @@
 
 **Goal:** 3D print case for 4x 3.5" HDDs
 
-**Status:** Ready to print once new bed arrives
+**Status:** Ready to print (new PEI bed installed 2026-04-06, needs calibration)
 
 **Priority Parts (Bay Components):**
 1. Clip x12 (test print) - 2-3 hours
@@ -140,9 +138,9 @@ ssh 3d.laenzlinger.net 'curl -s -X POST http://localhost:7125/printer/print/canc
 ssh 3d.laenzlinger.net 'curl -s -X POST http://localhost:7125/printer/gcode/script -d "{\"script\":\"G91\\nG1 Z20 F600\\nG90\"}"'
 ```
 
-## Next Steps (When New Bed Arrives)
+## Next Steps (New PEI Bed Installed 2026-04-06)
 
-1. **Install new magnetic PEI bed**
+1. ~~Install new magnetic PEI bed~~ ✅
 2. **Run fresh bed mesh calibration:**
    ```bash
    make petg-bed-mesh
@@ -154,9 +152,7 @@ ssh 3d.laenzlinger.net 'curl -s -X POST http://localhost:7125/printer/gcode/scri
 ## Shopping List
 
 **Critical:**
-- [ ] Magnetic PEI bed (235x235mm, textured or smooth)
-  - Brands: Creality official, Energetic, HICTOP
-  - Price: ~$25-35
+- [x] Magnetic PEI bed (235x235mm, textured or smooth) — installed 2026-04-06
 
 **Optional:**
 - [ ] Spare 0.4mm brass nozzles (pack of 5) - ~$10
@@ -212,11 +208,7 @@ ssh 3d.laenzlinger.net 'curl -s -X POST http://localhost:7125/printer/gcode/scri
 
 ## Blockers
 
-❌ Warped bed preventing reliable large prints
-- **Impact:** Cannot complete MASS project bay components
-- **Solution:** Order new magnetic PEI bed
-- **Timeline:** 3-5 days delivery
-- **Workaround:** Can print small parts in good area of bed
+None currently — new PEI bed installed, ready for calibration and printing.
 
 ## When Resuming
 
