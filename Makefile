@@ -22,11 +22,13 @@ help: ## Show this help message
 # Parts targets
 all: $(STLS) $(PNGS) ## Generate all STL and PNG files from SCAD sources
 
+OPENSCAD_FLAGS := --enable textmetrics
+
 $(GEN)/%.stl: $(SRC)/%.scad | $(GEN)
-	openscad -o $@ $<
+	openscad $(OPENSCAD_FLAGS) -o $@ $<
 
 $(GEN)/%.png: $(SRC)/%.scad | $(GEN)
-	$(DISPLAY_WRAPPER) openscad -o $@ --autocenter --viewall --colorscheme=Nature --imgsize=1200,800 $<
+	$(DISPLAY_WRAPPER) openscad $(OPENSCAD_FLAGS) -o $@ --autocenter --viewall --colorscheme=Nature --imgsize=1200,800 $<
 
 $(GEN):
 	mkdir -p $(GEN)
