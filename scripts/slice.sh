@@ -36,7 +36,7 @@ list_profiles() {
     exit 0
 }
 
-MATERIAL="Creality PLA Matte"
+MATERIAL="PLA"
 PROCESS="PLA Tuned"
 UPLOAD=false
 START=false

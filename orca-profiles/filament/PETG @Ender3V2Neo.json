@@ -1,6 +1,6 @@
 {
     "type": "filament",
-    "name": "Creality PETG @Ender3V2Neo",
+    "name": "PETG @Ender3V2Neo",
     "inherits": "Generic PETG @System",
     "from": "system",
     "nozzle_temperature": [
