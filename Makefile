@@ -141,3 +141,25 @@ profiles: ## List available slicer profiles
 monitor-simple: ## Monitor print (simple text output)
 	@watch -n 10 'ssh $(PRINTER) "curl -s \"http://localhost:7125/printer/objects/query?print_stats&extruder&heater_bed&display_status\" | python3 -c \"import sys,json; d=json.load(sys.stdin)[\"result\"][\"status\"]; ps=d[\"print_stats\"]; e=d[\"extruder\"]; b=d[\"heater_bed\"]; ds=d.get(\"display_status\",{}); print(f\\\"State: {ps[\\\"state\\\"]} | Progress: {ds.get(\\\"progress\\\",0)*100:.1f}%\\\"); print(f\\\"File: {ps.get(\\\"filename\\\",\\\"N/A\\\")}\\\"); print(f\\\"Hotend: {e[\\\"temperature\\\"]:.1f}°C/{e[\\\"target\\\"]:.0f}°C | Bed: {b[\\\"temperature\\\"]:.1f}°C/{b[\\\"target\\\"]:.0f}°C\\\")\""'
 
+
+
+# Calibration targets
+petg-preheat: ## Preheat bed and nozzle for PETG (240/80°C)
+	@echo "Preheating for PETG (240°C / 80°C)..."
+	@ssh $(PRINTER) 'curl -s -X POST http://localhost:7125/printer/gcode/script -H "Content-Type: application/json" -d "{\"script\":\"M140 S80\nM104 S240\nM190 S80\nM109 S240\"}"'
+	@echo "✓ Preheat started"
+
+pla-preheat: ## Preheat bed and nozzle for PLA (210/60°C)
+	@echo "Preheating for PLA (210°C / 60°C)..."
+	@ssh $(PRINTER) 'curl -s -X POST http://localhost:7125/printer/gcode/script -H "Content-Type: application/json" -d "{\"script\":\"M140 S60\nM104 S210\nM190 S60\nM109 S210\"}"'
+	@echo "✓ Preheat started"
+
+petg-bed-mesh: ## Bed mesh calibration at PETG temps (80°C), saves as 'petg' profile
+	@echo "Running bed mesh calibration at PETG bed temp (80°C)..."
+	@ssh $(PRINTER) 'curl -s -X POST http://localhost:7125/printer/gcode/script -H "Content-Type: application/json" -d "{\"script\":\"M140 S80\nM190 S80\nG28\nBED_MESH_CALIBRATE PROFILE=petg\nSAVE_CONFIG\"}"'
+	@echo "✓ Bed mesh 'petg' saved. Load with: BED_MESH_PROFILE LOAD=petg"
+
+pla-bed-mesh: ## Bed mesh calibration at PLA temps (60°C), saves as 'pla' profile
+	@echo "Running bed mesh calibration at PLA bed temp (60°C)..."
+	@ssh $(PRINTER) 'curl -s -X POST http://localhost:7125/printer/gcode/script -H "Content-Type: application/json" -d "{\"script\":\"M140 S60\nM190 S60\nG28\nBED_MESH_CALIBRATE PROFILE=pla\nSAVE_CONFIG\"}"'
+	@echo "✓ Bed mesh 'pla' saved. Load with: BED_MESH_PROFILE LOAD=pla"
