@@ -11,7 +11,8 @@ font_size = 12;
 text_radius = 20;
 thickness = 2;
 
-label();
+// Print upside down: mirror text so it reads correctly from the bed side
+mirror([1, 0, 0]) label();
 
 module label() {
   difference() {
