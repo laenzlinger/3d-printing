@@ -34,6 +34,9 @@ Pre-commit hooks check:
 
 - [ ] Extend start gcode purge line (current line is too short for consistent priming)
 - [ ] Tune PETG retraction and feed settings (stringing/blob issues)
+- [x] ~~Test PLA bed temp 65°C for better adhesion on textured PEI (ESP case warped at 60°C)~~
+  - 65°C caused elephant foot, no warping improvement
+  - Reducing PLA max fan to 40% fixed warping → applied to all PLA profiles
 
 ## Creality Ender 3 V2 Neo
 
