@@ -95,17 +95,41 @@ if [[ ! -f "$OUTPUT_3MF" ]]; then
     exit 1
 fi
 
-# Extract gcode from 3mf
+# Extract gcode from 3mf (with thumbnails)
 GCODE="$OUTPUT_DIR/${BASENAME}.gcode"
+
+# Generate thumbnail from STL since OrcaSlicer CLI doesn't render them
+THUMB_PNG="/tmp/slice_thumb_$$.png"
+if command -v openscad &>/dev/null; then
+    openscad -o "$THUMB_PNG" --autocenter --viewall --colorscheme=Nature --imgsize=180,180 \
+        <(echo "import(\"$(realpath "$STL")\");") 2>/dev/null || true
+fi
+
 python3 -c "
-import zipfile, sys
+import zipfile, base64, os
 with zipfile.ZipFile('$OUTPUT_3MF') as z:
+    gcode = thumb = None
     for name in z.namelist():
         if name.endswith('.gcode'):
-            with open('$GCODE', 'wb') as f:
-                f.write(z.read(name))
-            break
+            gcode = z.read(name).decode()
+        if 'thumbnail' in name.lower() and name.endswith('.png'):
+            thumb = z.read(name)
+    # Fallback: use OpenSCAD-rendered thumbnail
+    if not thumb and os.path.exists('$THUMB_PNG'):
+        with open('$THUMB_PNG', 'rb') as f:
+            thumb = f.read()
+    if gcode and thumb:
+        b64 = base64.b64encode(thumb).decode()
+        lines = [b64[i:i+78] for i in range(0, len(b64), 78)]
+        header = '; thumbnail begin 180x180 %d\n' % len(b64)
+        header += '\n'.join('; ' + l for l in lines)
+        header += '\n; thumbnail end\n\n'
+        gcode = header + gcode
+    if gcode:
+        with open('$GCODE', 'w') as f:
+            f.write(gcode)
 "
+rm -f "$THUMB_PNG"
 
 if [[ ! -f "$GCODE" ]]; then
     echo "Error: No gcode found in output" >&2
