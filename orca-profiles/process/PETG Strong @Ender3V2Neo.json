@@ -1,0 +1,26 @@
+{
+    "type": "process",
+    "name": "PETG Strong @Ender3V2Neo",
+    "inherits": "0.20mm Standard @Creality Ender3V2Neo",
+    "from": "system",
+    "layer_height": "0.16",
+    "initial_layer_print_height": "0.28",
+    "initial_layer_line_width": "0.56",
+    "initial_layer_speed": "20",
+    "print_speed": "40",
+    "outer_wall_speed": "25",
+    "inner_wall_speed": "35",
+    "sparse_infill_speed": "50",
+    "travel_speed": "150",
+    "wall_loops": "4",
+    "top_shell_layers": "6",
+    "bottom_shell_layers": "6",
+    "sparse_infill_density": "50%",
+    "sparse_infill_pattern": "gyroid",
+    "brim_type": "outer_only",
+    "brim_width": "8",
+    "instantiation": "true",
+    "compatible_printers": [
+        "Creality Ender-3 V2 Neo 0.4 nozzle"
+    ]
+}

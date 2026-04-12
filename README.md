@@ -18,6 +18,39 @@ make deploy       # Deploy config to printer
 make logs         # View Klipper logs
 ```
 
+## OrcaSlicer Profiles
+
+Profiles live in `orca-profiles/` and are used by the `make slice` command.
+
+```bash
+make profiles                                          # List available profiles
+make slice STL=part.stl MATERIAL=PETG PROCESS="PETG Tuned"  # Slice with specific profile
+make slice-print STL=part.stl MATERIAL=PETG PROCESS="PETG Strong"  # Slice and start print
+```
+
+### Filament Profiles
+
+| Profile | Nozzle | Bed | Fan | Retraction | Use for |
+|---------|--------|-----|-----|------------|---------|
+| PLA | 200°C | 60°C | 40% | 1.5mm @ 30mm/s | General purpose, decorative parts |
+| PETG | 235°C | 80°C | 40% | 1.5mm @ 30mm/s | Structural parts, outdoor use |
+
+### Process Profiles
+
+| Profile | Layers | Walls | Infill | Speed | Use for |
+|---------|--------|-------|--------|-------|---------|
+| PLA Tuned | 0.20mm | 3 (0.45mm) | 15% grid | 125mm/s | Fast PLA prints, non-structural |
+| PETG Tuned | 0.20mm | 3 (0.4mm) | 25% gyroid | 50mm/s | Standard PETG, moderate strength |
+| PETG Strong | 0.16mm | 4 (0.4mm) | 50% gyroid | 40mm/s | Max strength, functional/structural parts |
+
+All process profiles share: 0.28mm first layer, 140% first layer line width (0.56mm), 8mm brim (PETG), 0.3mm Z-hop.
+
+### Profile Selection Guide
+
+- **Decorative / fast** → PLA + PLA Tuned
+- **General PETG** → PETG + PETG Tuned
+- **Structural / load-bearing** → PETG + PETG Strong (bike parts, brackets, mounts)
+
 ## Git Hooks
 
 Run once after cloning:
