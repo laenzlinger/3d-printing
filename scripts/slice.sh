@@ -7,6 +7,18 @@ PROFILE_DIR="$REPO_DIR/orca-profiles"
 PRINTER="192.168.1.142"
 OUTPUT_DIR="$REPO_DIR/generated"
 
+# Detect OrcaSlicer binary
+if command -v orca-slicer &>/dev/null; then
+    ORCA=orca-slicer
+elif [[ -x "/Applications/OrcaSlicer.app/Contents/MacOS/OrcaSlicer" ]]; then
+    ORCA="/Applications/OrcaSlicer.app/Contents/MacOS/OrcaSlicer"
+elif [[ -d "/opt/homebrew/Caskroom/orcaslicer" ]]; then
+    ORCA="$(find /opt/homebrew/Caskroom/orcaslicer -name OrcaSlicer -path '*/MacOS/*' | head -1)"
+else
+    echo "Error: OrcaSlicer not found" >&2
+    exit 1
+fi
+
 usage() {
     cat <<EOF
 Usage: $(basename "$0") [OPTIONS] <file.stl>
@@ -83,7 +95,7 @@ echo "Slicing: $STL"
 echo "  Material: $MATERIAL"
 echo "  Process:  $PROCESS"
 
-orca-slicer \
+"$ORCA" \
     --load-settings "$MACHINE;$PROCESS_FILE" \
     --load-filaments "$FILAMENT" \
     --slice 0 \
