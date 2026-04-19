@@ -43,7 +43,7 @@ make slice-print STL=part.stl MATERIAL=PETG PROCESS="PETG Strong"  # Slice and s
 | PETG Tuned | 0.20mm | 3 (0.4mm) | 25% gyroid | 50mm/s | Standard PETG, moderate strength |
 | PETG Strong | 0.16mm | 4 (0.4mm) | 50% gyroid | 40mm/s | Max strength, functional/structural parts |
 
-All process profiles share: 0.28mm first layer, 140% first layer line width (0.56mm), 8mm brim (PETG), 0.3mm Z-hop.
+All process profiles share: 0.28mm first layer, 140% first layer line width (0.56mm), skirt by default (brim enabled case-by-case), 0.3mm Z-hop.
 
 ### Profile Selection Guide
 
