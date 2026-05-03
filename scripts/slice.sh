@@ -30,6 +30,7 @@ Options:
   -p, --process NAME    Process profile (default: PLA Tuned)
   -u, --upload          Upload gcode to printer via Moonraker
   -s, --start           Upload and start printing
+  -b, --brim            Use brim instead of skirt
   -l, --list            List available profiles
   -h, --help            Show this help
 
@@ -52,6 +53,7 @@ MATERIAL="PLA"
 PROCESS="PLA Tuned"
 UPLOAD=false
 START=false
+BRIM=false
 
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -59,6 +61,7 @@ while [[ $# -gt 0 ]]; do
         -p|--process) PROCESS="$2"; shift 2 ;;
         -u|--upload) UPLOAD=true; shift ;;
         -s|--start) UPLOAD=true; START=true; shift ;;
+        -b|--brim) BRIM=true; shift ;;
         -l|--list) list_profiles ;;
         -h|--help) usage ;;
         *) STL="$1"; shift ;;
@@ -91,9 +94,18 @@ BASENAME="$(basename "${STL%.stl}")"
 OUTPUT_3MF="$OUTPUT_DIR/${BASENAME}.3mf"
 mkdir -p "$OUTPUT_DIR"
 
+# Apply brim override if requested
+if $BRIM; then
+    BRIM_PROCESS="/tmp/slice_brim_$$.json"
+    sed -e 's/"brim_type": "no_brim"/"brim_type": "outer_only"/' \
+        -e 's/"skirt_loops": "[0-9]*"/"skirt_loops": "0"/' "$PROCESS_FILE" > "$BRIM_PROCESS"
+    PROCESS_FILE="$BRIM_PROCESS"
+    trap 'rm -f "$BRIM_PROCESS"' EXIT
+fi
+
 echo "Slicing: $STL"
 echo "  Material: $MATERIAL"
-echo "  Process:  $PROCESS"
+echo "  Process:  $PROCESS$(if $BRIM; then echo " (with brim)"; fi)"
 
 "$ORCA" \
     --load-settings "$MACHINE;$PROCESS_FILE" \

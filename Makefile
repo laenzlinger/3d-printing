@@ -122,14 +122,14 @@ ssh: ## SSH into printer
 monitor: ## Monitor current print progress
 	@./scripts/monitor-print.py
 
-slice: ## Slice STL: make slice STL=file.stl [MATERIAL=name] [PROCESS=name]
-	@./scripts/slice.sh $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
+slice: ## Slice STL: make slice STL=file.stl [MATERIAL=name] [PROCESS=name] [BRIM=1]
+	@./scripts/slice.sh $(if $(BRIM),--brim) $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
 
-slice-upload: ## Slice and upload: make slice-upload STL=file.stl
-	@./scripts/slice.sh -u $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
+slice-upload: ## Slice and upload: make slice-upload STL=file.stl [BRIM=1]
+	@./scripts/slice.sh -u $(if $(BRIM),--brim) $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
 
-slice-print: ## Slice, upload and start: make slice-print STL=file.stl
-	@./scripts/slice.sh -s $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
+slice-print: ## Slice, upload and start: make slice-print STL=file.stl [BRIM=1]
+	@./scripts/slice.sh -s $(if $(BRIM),--brim) $(if $(MATERIAL),-m "$(MATERIAL)") $(if $(PROCESS),-p "$(PROCESS)") "$(STL)"
 
 first-layer-test: ## Print first layer test patches across the bed
 	@./scripts/slice.sh -s calibration/first_layer_patches.stl
