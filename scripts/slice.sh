@@ -31,6 +31,7 @@ Options:
   -u, --upload          Upload gcode to printer via Moonraker
   -s, --start           Upload and start printing
   -b, --brim            Use brim instead of skirt
+  -t, --support         Enable tree supports (build plate only)
   -l, --list            List available profiles
   -h, --help            Show this help
 
@@ -54,6 +55,7 @@ PROCESS="PLA Tuned"
 UPLOAD=false
 START=false
 BRIM=false
+SUPPORT=false
 
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -62,6 +64,7 @@ while [[ $# -gt 0 ]]; do
         -u|--upload) UPLOAD=true; shift ;;
         -s|--start) UPLOAD=true; START=true; shift ;;
         -b|--brim) BRIM=true; shift ;;
+        -t|--support) SUPPORT=true; shift ;;
         -l|--list) list_profiles ;;
         -h|--help) usage ;;
         *) STL="$1"; shift ;;
@@ -103,9 +106,30 @@ if $BRIM; then
     trap 'rm -f "$BRIM_PROCESS"' EXIT
 fi
 
+# Apply tree support override if requested
+if $SUPPORT; then
+    SUPPORT_PROCESS="/tmp/slice_support_$$.json"
+    python3 -c "
+import json, sys
+with open('$PROCESS_FILE') as f:
+    p = json.load(f)
+p['enable_support'] = '1'
+p['support_type'] = 'tree(auto)'
+p['support_on_build_plate_only'] = '1'
+p['support_threshold_angle'] = '45'
+with open('$SUPPORT_PROCESS', 'w') as f:
+    json.dump(p, f, indent=4)
+"
+    PROCESS_FILE="$SUPPORT_PROCESS"
+    trap 'rm -f "$SUPPORT_PROCESS" "${BRIM_PROCESS:-}"' EXIT
+fi
+
+OPTS=""
+$BRIM && OPTS="$OPTS brim"
+$SUPPORT && OPTS="$OPTS supports"
 echo "Slicing: $STL"
 echo "  Material: $MATERIAL"
-echo "  Process:  $PROCESS$(if $BRIM; then echo " (with brim)"; fi)"
+echo "  Process:  $PROCESS${OPTS:+ (with$OPTS)}"
 
 "$ORCA" \
     --load-settings "$MACHINE;$PROCESS_FILE" \
