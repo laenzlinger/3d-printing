@@ -10,7 +10,7 @@
 - Fluidd web interface at https://3d.laenzlinger.net
 - Crowsnest webcam configured
 - BLTouch for bed leveling
-- SSH access: `ssh 3d.laenzlinger.net`
+- SSH access: `ssh 3d.home`
 
 **Repository Structure:**
 - `/home/laenzi/dev/gh/laenzlinger/3d-printing/` - Main repo (source of truth)
@@ -129,13 +129,13 @@ make petg-preheat    # Preheat for PETG
 **API Access:**
 ```bash
 # Check status
-ssh 3d.laenzlinger.net 'curl -s "http://localhost:7125/printer/objects/query?print_stats"'
+ssh 3d.home 'curl -s "http://localhost:7125/printer/objects/query?print_stats"'
 
 # Cancel print
-ssh 3d.laenzlinger.net 'curl -s -X POST http://localhost:7125/printer/print/cancel'
+ssh 3d.home 'curl -s -X POST http://localhost:7125/printer/print/cancel'
 
 # Raise head
-ssh 3d.laenzlinger.net 'curl -s -X POST http://localhost:7125/printer/gcode/script -d "{\"script\":\"G91\\nG1 Z20 F600\\nG90\"}"'
+ssh 3d.home 'curl -s -X POST http://localhost:7125/printer/gcode/script -d "{\"script\":\"G91\\nG1 Z20 F600\\nG90\"}"'
 ```
 
 ## Next Steps (New PEI Bed Installed 2026-04-06)
@@ -181,7 +181,7 @@ ssh 3d.laenzlinger.net 'curl -s -X POST http://localhost:7125/printer/gcode/scri
 ## Printer Configuration Files
 
 - Source: `printer_data/config/printer.cfg`
-- Live: `ssh 3d.laenzlinger.net:~/printer_data/config/printer.cfg`
+- Live: `ssh 3d.home:~/printer_data/config/printer.cfg`
 - Backup: `../klipper-backup/printer_data/config/printer.cfg`
 
 ## Lessons Learned

@@ -16,7 +16,7 @@
 
 **Access:**
 - Web: https://3d.laenzlinger.net
-- SSH: `ssh 3d.laenzlinger.net`
+- SSH: `ssh 3d.home`
 - Local IP: 192.168.1.142
 
 ## Configuration Locations
@@ -37,26 +37,26 @@
 
 ### Check System Status
 ```bash
-ssh 3d.laenzlinger.net "systemctl status klipper moonraker crowsnest"
+ssh 3d.home "systemctl status klipper moonraker crowsnest"
 ```
 
 ### View Logs
 ```bash
-ssh 3d.laenzlinger.net "tail -f ~/printer_data/logs/klippy.log"
-ssh 3d.laenzlinger.net "tail -f ~/printer_data/logs/moonraker.log"
+ssh 3d.home "tail -f ~/printer_data/logs/klippy.log"
+ssh 3d.home "tail -f ~/printer_data/logs/moonraker.log"
 ```
 
 ### Restart Services
 ```bash
-ssh 3d.laenzlinger.net "sudo systemctl restart klipper"
-ssh 3d.laenzlinger.net "sudo systemctl restart moonraker"
-ssh 3d.laenzlinger.net "sudo systemctl restart crowsnest"
+ssh 3d.home "sudo systemctl restart klipper"
+ssh 3d.home "sudo systemctl restart moonraker"
+ssh 3d.home "sudo systemctl restart crowsnest"
 ```
 
 ### Update Klipper/Moonraker
 Use KIAUH on the Pi:
 ```bash
-ssh 3d.laenzlinger.net
+ssh 3d.home
 cd ~/kiauh
 ./kiauh.sh
 # Select option 1 (Update)
@@ -66,7 +66,7 @@ cd ~/kiauh
 Configuration is automatically backed up to GitHub via the Klipper-Backup script.
 Manual backup:
 ```bash
-ssh 3d.laenzlinger.net "cd ~/klipper-backup && git pull && git add . && git commit -m 'Manual backup' && git push"
+ssh 3d.home "cd ~/klipper-backup && git pull && git add . && git commit -m 'Manual backup' && git push"
 ```
 
 ## AI-Assisted Maintenance
@@ -123,15 +123,15 @@ Moonraker logs show repeated "octoapp" subscription failures (HTTP 404). This is
 
 ### Check camera
 ```bash
-ssh 3d.laenzlinger.net "v4l2-ctl --list-devices"
+ssh 3d.home "v4l2-ctl --list-devices"
 ```
 
 ### View system resources
 ```bash
-ssh 3d.laenzlinger.net "htop"
+ssh 3d.home "htop"
 ```
 
 ### Check network
 ```bash
-ssh 3d.laenzlinger.net "ip addr show"
+ssh 3d.home "ip addr show"
 ```

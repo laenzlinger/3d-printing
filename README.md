@@ -76,7 +76,7 @@ Pre-commit hooks check:
 ### System Access
 
 * Web Interface: https://3d.laenzlinger.net
-* SSH: `ssh 3d.laenzlinger.net`
+* SSH: `ssh 3d.home`
 
 ### Mods
 

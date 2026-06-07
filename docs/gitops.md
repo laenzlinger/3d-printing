@@ -57,10 +57,10 @@ cd ~/dev/gh/laenzlinger/klipper-backup
 git diff origin/main printer_data/config/printer.cfg
 
 # Deploy to printer
-scp printer_data/config/printer.cfg 3d.laenzlinger.net:~/printer_data/config/
+scp printer_data/config/printer.cfg 3d.home:~/printer_data/config/
 
 # Restart Klipper to apply changes
-ssh 3d.laenzlinger.net "sudo systemctl restart klipper"
+ssh 3d.home "sudo systemctl restart klipper"
 
 # Or use Fluidd web interface: Firmware Restart
 ```
@@ -69,10 +69,10 @@ ssh 3d.laenzlinger.net "sudo systemctl restart klipper"
 
 ```bash
 # Check service status
-ssh 3d.laenzlinger.net "systemctl status klipper"
+ssh 3d.home "systemctl status klipper"
 
 # Check logs for errors
-ssh 3d.laenzlinger.net "tail -50 ~/printer_data/logs/klippy.log"
+ssh 3d.home "tail -50 ~/printer_data/logs/klippy.log"
 ```
 
 ## Safety Practices
@@ -93,7 +93,7 @@ Create `~/dev/gh/laenzlinger/klipper-backup/deploy.sh`:
 #!/bin/bash
 set -e
 
-PRINTER="3d.laenzlinger.net"
+PRINTER="3d.home"
 CONFIG_DIR="printer_data/config"
 
 echo "Deploying configuration to printer..."
@@ -127,7 +127,7 @@ Create `~/dev/gh/laenzlinger/klipper-backup/verify-backup.sh`:
 #!/bin/bash
 set -e
 
-PRINTER="3d.laenzlinger.net"
+PRINTER="3d.home"
 CONFIG_DIR="printer_data/config"
 
 echo "Comparing local backup with live config..."
@@ -157,12 +157,12 @@ chmod +x ~/dev/gh/laenzlinger/klipper-backup/verify-backup.sh
 
 Check Moonraker logs:
 ```bash
-ssh 3d.laenzlinger.net "tail -100 ~/printer_data/logs/moonraker.log | grep -i backup"
+ssh 3d.home "tail -100 ~/printer_data/logs/moonraker.log | grep -i backup"
 ```
 
 Manually trigger backup:
 ```bash
-ssh 3d.laenzlinger.net "cd ~/klipper-backup && ./script.sh"
+ssh 3d.home "cd ~/klipper-backup && ./script.sh"
 ```
 
 ### Config changes not taking effect
