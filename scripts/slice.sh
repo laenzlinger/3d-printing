@@ -117,6 +117,10 @@ p['enable_support'] = '1'
 p['support_type'] = 'tree(auto)'
 p['support_on_build_plate_only'] = '1'
 p['support_threshold_angle'] = '45'
+p['support_top_z_distance'] = '0.2'
+p['support_interface_top_layers'] = '2'
+p['support_interface_spacing'] = '0.5'
+p['support_interface_speed'] = '30'
 with open('$SUPPORT_PROCESS', 'w') as f:
     json.dump(p, f, indent=4)
 "
