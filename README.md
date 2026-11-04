@@ -11,6 +11,7 @@ Documentation for maintaining a Creality Ender 3 V2 Neo with Klipper firmware.
 
 **Architecture Decisions:**
 - [ADR 001: Migrate Klipper Host to RPi5 with MainsailOS](docs/decisions/001-klipper-host-migration-to-rpi5-mainsailos.md)
+- [ADR 002: UPS Power Management and Solar-Scheduled Charging](docs/decisions/002-ups-power-management.md)
 
 **Quick Commands:**
 ```bash
