@@ -9,7 +9,7 @@ The RPi5 running Klipper is protected by a Waveshare UPS HAT (E) (I2C address `0
 The UPS is always powered from a permanent (non-switched) outlet. The RPi should only
 run while printing — it does not need to be always on.
 
-Two problems need solving:
+Three problems need solving:
 
 1. **Remote on/off**: The UPS is always powered, so cutting the smart plug does not
    turn off the RPi. Turning the RPi off via OS shutdown is easy, but there is no
@@ -19,6 +19,12 @@ Two problems need solving:
    two SolarEdge inverters whose output is tracked in Home Assistant via
    `sensor.solar_excess_power`. Charging should be aligned to solar surplus to avoid
    drawing from the grid.
+
+3. **Print state preservation on power loss**: If mains power is lost mid-print, the RPi
+   must not be hard-killed. The UPS provides battery time to cancel the print gracefully
+   (park head, turn off heaters), save the print state (file name, progress, layer), and
+   shut down cleanly. Without this, a power loss leaves the hotend potentially at
+   temperature, the head in an arbitrary position, and the print state unknown on restart.
 
 ### UPS HAT (E) Boot-on-Power Mechanism
 
@@ -140,10 +146,29 @@ This arms the "boot when charging detected" mechanism for the next power-on.
         entity_id: switch.3d_ups_charging
 ```
 
+### Power Loss Response Sequence
+
+When the UPS daemon detects input power is lost (Type-C charging gone, battery discharging):
+
+1. Call Moonraker API: `POST /printer/gcode/script` with gcode `CANCEL_PRINT`
+   - Klipper executes the `CANCEL_PRINT` macro: parks head, turns off heaters and fans
+2. Call Moonraker API: `GET /printer/objects/query?print_stats&virtual_sdcard` and
+   save response to `/var/lib/ups-monitor/last_print_state.json`
+   - Captures: filename, progress %, current layer, total layers, print duration
+3. Publish `binary_sensor.3d_ups_on_battery: ON` to MQTT → HA notifies via mobile push
+4. After 20 seconds (allowing CANCEL_PRINT to complete): `sudo systemctl poweroff`
+
+On next boot, Moonraker's job history already records the interrupted print. The saved
+`last_print_state.json` provides additional context (e.g. layer number) for deciding
+whether to restart the print from scratch.
+
+**Note:** Klipper does not support mid-print resume after power loss — the print must
+be restarted from the beginning. The goal is a clean cancellation, not resume.
+
 ### UPS Monitoring Daemon
 
 A Python systemd service on the RPi5 publishes UPS state to MQTT every 60 seconds
-for Home Assistant auto-discovery:
+for Home Assistant auto-discovery, and reacts to power loss:
 
 | HA Entity | MQTT Topic | Description |
 |---|---|---|
@@ -151,10 +176,37 @@ for Home Assistant auto-discovery:
 | `sensor.3d_ups_battery_voltage` | `homeassistant/sensor/3d_ups/battery_voltage` | Battery V |
 | `sensor.3d_ups_input_power` | `homeassistant/sensor/3d_ups/input_power` | Charging W |
 | `binary_sensor.3d_ups_charging` | `homeassistant/binary_sensor/3d_ups/charging` | Is charging |
+| `binary_sensor.3d_ups_on_battery` | `homeassistant/binary_sensor/3d_ups/on_battery` | On battery (power lost) |
 
 MQTT broker: `192.168.1.224:1883` (existing Mosquitto instance)
 
+#### HA automation for power loss notification
+
+```yaml
+- id: 3d_ups_power_loss
+  alias: "3D UPS: notify on power loss"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.3d_ups_on_battery
+      to: "on"
+  action:
+    - action: notify.mobile_app_laenzis
+      data:
+        title: "3D Drucker: Stromausfall"
+        message: >
+          Stromausfall erkannt. Druck wird abgebrochen und RPi fährt herunter.
+          {% if states('sensor.3d_current_print_state') == 'printing' %}
+          Datei: {{ states('sensor.3d_print_filename') }}
+          {% endif %}
+```
+
 ## Rationale
+
+**Why cancel the print on power loss (not pause):**
+- Klipper does not support mid-print resume after power loss — the exact head position,
+  extruder state, and bed mesh calibration cannot be reliably restored
+- A clean cancel (park + cool) is safer than leaving the head at temperature
+- The print file is preserved in Moonraker history for easy restart
 
 **Why a smart plug on the charging input (not the UPS output):**
 - UPS output stays always powered → no risk of hard-killing the RPi
@@ -179,11 +231,14 @@ MQTT broker: `192.168.1.224:1883` (existing Mosquitto instance)
 
 1. [ ] Pair Zigbee plug, rename entity to `switch.3d_ups_charging`
 2. [ ] Install UPS monitoring daemon (`/opt/ups-monitor/ups_monitor.py`) as systemd service
+       - Publishes MQTT sensors every 60s
+       - Detects power loss → cancel print → save state → shutdown
 3. [ ] Install UPS shutdown service (`/etc/systemd/system/ups-shutdown.service`)
-4. [ ] Verify `0x55` mechanism: shutdown RPi, confirm UPS boots it when charging is restored
-5. [ ] Add HA automations (solar charging + emergency charge)
-6. [ ] Update `script.printer_safe_shutdown` to turn off `switch.3d_ups_charging` after shutdown
-7. [ ] Add `script.printer_start` to HA: turn on charging plug + wait for Moonraker ready
+4. [ ] Add `CANCEL_PRINT` macro to `printer.cfg` if not already present (park head, cool)
+5. [ ] Verify `0x55` mechanism: shutdown RPi, confirm UPS boots it when charging is restored
+6. [ ] Add HA automations (solar charging + emergency charge + power loss notification)
+7. [ ] Update `script.printer_safe_shutdown` to turn off `switch.3d_ups_charging` after shutdown
+8. [ ] Add `script.printer_start` to HA: turn on charging plug + wait for Moonraker ready
 
 ## Consequences
 
@@ -191,7 +246,9 @@ MQTT broker: `192.168.1.224:1883` (existing Mosquitto instance)
 - UPS battery charges for free using solar surplus
 - Remote on/off without additional microcontroller hardware
 - UPS state visible in HA dashboard
-- Graceful shutdown on unexpected power loss (via battery level monitoring daemon)
+- Graceful print cancellation on unexpected power loss (park head, cool, save state)
+- Mobile notification on power loss with print context
+- Print state saved to disk for reference on restart
 
 **Negative:**
 - RPi does not boot immediately on power-on — 60-second delay from UPS check cycle
