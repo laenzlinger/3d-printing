@@ -162,8 +162,10 @@ On next boot, Moonraker's job history already records the interrupted print. The
 `last_print_state.json` provides additional context (e.g. layer number) for deciding
 whether to restart the print from scratch.
 
-**Note:** Klipper does not support mid-print resume after power loss — the print must
-be restarted from the beginning. The goal is a clean cancellation, not resume.
+**Note:** Klipper does not currently support mid-print resume after power loss — the
+print must be restarted from the beginning. The goal is a clean cancellation, not resume.
+If Klipper adds power loss recovery in the future, the saved `last_print_state.json`
+(position, layer, file) would provide the inputs needed to implement resume support.
 
 ### UPS Monitoring Daemon
 
@@ -248,7 +250,8 @@ MQTT broker: `192.168.1.224:1883` (existing Mosquitto instance)
 - UPS state visible in HA dashboard
 - Graceful print cancellation on unexpected power loss (park head, cool, save state)
 - Mobile notification on power loss with print context
-- Print state saved to disk for reference on restart
+- Print state saved to disk for reference on restart; provides inputs for future resume
+  support if Klipper adds power loss recovery
 
 **Negative:**
 - RPi does not boot immediately on power-on — 60-second delay from UPS check cycle
