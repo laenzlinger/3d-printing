@@ -11,7 +11,7 @@ STLS := $(patsubst $(SRC)/%.scad,$(GEN)/%.stl,$(SRCS))
 PNGS := $(patsubst $(SRC)/%.scad,$(GEN)/%.png,$(SRCS))
 
 # Printer management
-PRINTER := 192.168.1.142
+PRINTER := 3d
 BACKUP_REPO := ../klipper-backup
 CONFIG_DIR := printer_data/config
 SOURCE_CONFIG := printer_data/config
