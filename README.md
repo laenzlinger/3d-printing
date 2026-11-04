@@ -9,6 +9,9 @@ Documentation for maintaining a Creality Ender 3 V2 Neo with Klipper firmware.
 - [docs/cura-petg-profile.md](docs/cura-petg-profile.md) - Cura profile setup for PETG
 - [docs/session-notes.md](docs/session-notes.md) - Print session notes and tuning history
 
+**Architecture Decisions:**
+- [ADR 001: Migrate Klipper Host to RPi5 with MainsailOS](docs/decisions/001-klipper-host-migration-to-rpi5-mainsailos.md)
+
 **Quick Commands:**
 ```bash
 make              # Show all available commands
