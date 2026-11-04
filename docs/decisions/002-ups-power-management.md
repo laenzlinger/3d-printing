@@ -167,6 +167,16 @@ print must be restarted from the beginning. The goal is a clean cancellation, no
 If Klipper adds power loss recovery in the future, the saved `last_print_state.json`
 (position, layer, file) would provide the inputs needed to implement resume support.
 
+**Third-party PLR plugins already exist** and can be integrated independently of this ADR:
+- [klipper-plr](https://github.com/ankurv2k6/klipper-plr) — automated state saving and recovery
+- [Yumi_PLR](https://github.com/Yumi-Lab/YUMI_PLR) — saves per-layer, adds `RESUME_INTERRUPTED` button in Mainsail
+- [plr-klipper](https://github.com/The--Captain/plr-klipper) — slicer inserts `LOG_Z` macro at each layer change
+
+All require the slicer to insert a state-save macro at each layer change (OrcaSlicer
+supports this via "Layer change G-code"). The UPS + clean shutdown implemented here is
+a prerequisite for PLR to work reliably — without a UPS, the MCU hard-kills too fast
+to save state.
+
 ### UPS Monitoring Daemon
 
 A Python systemd service on the RPi5 publishes UPS state to MQTT every 60 seconds
@@ -252,6 +262,8 @@ MQTT broker: `192.168.1.224:1883` (existing Mosquitto instance)
 - Mobile notification on power loss with print context
 - Print state saved to disk for reference on restart; provides inputs for future resume
   support if Klipper adds power loss recovery
+- Third-party PLR plugins (Yumi_PLR, klipper-plr) can be added on top of this setup
+  to enable actual print resume — the UPS is a prerequisite for reliable PLR
 
 **Negative:**
 - RPi does not boot immediately on power-on — 60-second delay from UPS check cycle
