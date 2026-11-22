@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_DIR="$(dirname "$SCRIPT_DIR")"
-PRINTER="192.168.1.142"
+PRINTER="mainsailos.home"
 SEGS="$REPO_DIR/calibration/z_segments"
 GCODE="$REPO_DIR/generated/z_offset_calibration.gcode"
 THREE_MF="$REPO_DIR/generated/z_offset_calibration.3mf"

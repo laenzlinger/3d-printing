@@ -11,7 +11,7 @@ STLS := $(patsubst $(SRC)/%.scad,$(GEN)/%.stl,$(SRCS))
 PNGS := $(patsubst $(SRC)/%.scad,$(GEN)/%.png,$(SRCS))
 
 # Printer management
-PRINTER := 3d
+PRINTER := mainsailos.home
 BACKUP_REPO := ../klipper-backup
 CONFIG_DIR := printer_data/config
 SOURCE_CONFIG := printer_data/config

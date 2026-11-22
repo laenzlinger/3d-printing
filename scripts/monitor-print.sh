@@ -1,7 +1,7 @@
 #!/bin/bash
 # Monitor print progress with nice terminal UI
 
-PRINTER="3d.laenzlinger.net"
+PRINTER="mainsailos.home"
 INTERVAL=${1:-10}  # Default 10 seconds
 
 # Clear screen and hide cursor

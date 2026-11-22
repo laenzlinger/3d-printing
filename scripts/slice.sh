@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_DIR="$(dirname "$SCRIPT_DIR")"
 PROFILE_DIR="$REPO_DIR/orca-profiles"
-PRINTER="192.168.1.142"
+PRINTER="mainsailos.home"
 OUTPUT_DIR="$REPO_DIR/generated"
 
 # Detect OrcaSlicer binary
@@ -139,6 +139,7 @@ echo "  Process:  $PROCESS${OPTS:+ (with$OPTS)}"
     --load-settings "$MACHINE;$PROCESS_FILE" \
     --load-filaments "$FILAMENT" \
     --slice 0 \
+    --orient 1 \
     --export-3mf "$OUTPUT_3MF" \
     "$STL" 2>&1 | grep -v "thumbnail\|glew\|DRI_PRIME\|opengl" || true
 

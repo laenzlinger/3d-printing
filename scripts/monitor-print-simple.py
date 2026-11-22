@@ -7,7 +7,7 @@ import json
 import subprocess
 from datetime import timedelta
 
-PRINTER = "3d.laenzlinger.net"
+PRINTER = "mainsailos.home"
 INTERVAL = 10
 
 def get_printer_status():

@@ -9,7 +9,7 @@ import signal
 import os
 from datetime import timedelta
 
-PRINTER = "3d.laenzlinger.net"
+PRINTER = "mainsailos.home"
 INTERVAL = 10  # seconds
 
 # Detect if we're in a proper terminal
