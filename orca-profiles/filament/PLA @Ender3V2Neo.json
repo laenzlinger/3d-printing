@@ -1,58 +1,38 @@
 {
     "type": "filament",
     "name": "PLA @Ender3V2Neo",
-    "inherits": "Generic PLA @System",
-    "from": "system",
-    "nozzle_temperature": [
-        "200"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "200"
-    ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
-    "fan_max_speed": [
-        "40"
-    ],
-    "fan_min_speed": [
-        "40"
-    ],
-    "close_fan_the_first_x_layers": [
-        "4"
-    ],
-    "filament_retraction_length": [
-        "1.5"
-    ],
-    "filament_retraction_speed": [
-        "30"
-    ],
-    "filament_z_hop": [
-        "0.3"
-    ],
-    "filament_z_hop_types": [
-        "Normal Lift"
-    ],
+    "from": "User",
     "instantiation": "true",
-    "cool_plate_temp": [
-        "60"
-    ],
-    "cool_plate_temp_initial_layer": [
-        "60"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
-    ],
-    "eng_plate_temp": [
-        "60"
-    ],
-    "eng_plate_temp_initial_layer": [
-        "60"
-    ]
+    "filament_diameter": ["1.75"],
+    "nozzle_temperature": ["200"],
+    "nozzle_temperature_initial_layer": ["200"],
+    "hot_plate_temp": ["65"],
+    "hot_plate_temp_initial_layer": ["65"],
+    "cool_plate_temp": ["65"],
+    "cool_plate_temp_initial_layer": ["65"],
+    "textured_plate_temp": ["65"],
+    "textured_plate_temp_initial_layer": ["65"],
+    "eng_plate_temp": ["65"],
+    "eng_plate_temp_initial_layer": ["65"],
+    "fan_max_speed": ["50"],
+    "fan_min_speed": ["50"],
+    "close_fan_the_first_x_layers": ["4"],
+    "filament_retraction_length": ["1.5"],
+    "filament_retraction_speed": ["30"],
+    "filament_z_hop": ["0.3"],
+    "filament_z_hop_types": ["Normal Lift"],
+    "filament_cost": ["0"],
+    "filament_density": ["0"],
+    "filament_adhesiveness_category": ["0"],
+    "filament_change_length": ["10"],
+    "filament_colour": ["#F2754E"],
+    "filament_cooling_initial_speed": ["2.2"],
+    "filament_cooling_final_speed": ["3.4"],
+    "filament_cooling_moves": ["4"],
+    "filament_end_gcode": [" "],
+    "filament_loading_speed": ["1"],
+    "filament_loading_time": ["0"],
+    "filament_unloading_speed": ["1"],
+    "filament_unloading_time": ["0"],
+    "filament_max_volumetric_speed": ["2"]
 }
