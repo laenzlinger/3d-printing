@@ -13,8 +13,8 @@ Configuration is managed through Git with automatic backups and manual deploymen
 ### Automatic Backup (Pi → GitHub)
 
 Klipper-Backup runs on the Pi and automatically commits/pushes changes to GitHub when:
-- Configuration files are modified via Fluidd/Moonraker
-- Manual trigger via Fluidd interface (Machine → Update Manager → klipper-backup)
+- Configuration files are modified via Mainsail/Moonraker
+- Manual trigger via Mainsail interface (Machine → Update Manager → klipper-backup)
 
 **Backed up files:**
 - `~/printer_data/config/*` (all config files)
@@ -35,7 +35,7 @@ Changes made locally should be deployed manually to ensure safety.
 ### 1. Making Configuration Changes
 
 #### Option A: Via Web Interface (Recommended for testing)
-1. Edit config in Fluidd: https://3d.laenzlinger.net
+1. Edit config in Mainsail: https://3d.laenzlinger.net
 2. Save and restart services
 3. Test the changes
 4. Backup is automatically pushed to GitHub
@@ -62,7 +62,7 @@ scp printer_data/config/printer.cfg 3d.home:~/printer_data/config/
 # Restart Klipper to apply changes
 ssh 3d.home "sudo systemctl restart klipper"
 
-# Or use Fluidd web interface: Firmware Restart
+# Or use Mainsail web interface: Firmware Restart
 ```
 
 ### 3. Verify Deployment
@@ -169,7 +169,7 @@ ssh 3d.home "cd ~/klipper-backup && ./script.sh"
 
 1. Check for syntax errors in logs
 2. Ensure Klipper restarted successfully
-3. Try "Firmware Restart" in Fluidd (not just service restart)
+3. Try "Firmware Restart" in Mainsail (not just service restart)
 
 ### Merge conflicts
 

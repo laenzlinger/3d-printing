@@ -11,7 +11,7 @@
 **Software Stack:**
 - Klipper firmware (installed via KIAUH)
 - Moonraker (API server)
-- Fluidd (web interface)
+- Mainsail (web interface)
 - Crowsnest (camera streaming)
 
 **Access:**
@@ -25,7 +25,7 @@
 - Main config: `~/printer_data/config/printer.cfg`
 - Moonraker: `~/printer_data/config/moonraker.conf`
 - Camera: `~/printer_data/config/crowsnest.conf`
-- Fluidd: `~/printer_data/config/fluidd.cfg` (symlink to `~/fluidd-config/fluidd.cfg`)
+- Mainsail: `~/printer_data/config/mainsail.cfg` (if configured)
 - Logs: `~/printer_data/logs/`
 
 ### Backup Repository
@@ -115,7 +115,7 @@ Moonraker logs show repeated "octoapp" subscription failures (HTTP 404). This is
 
 ## Service Ports
 
-- Fluidd web interface: 80/443 (via reverse proxy)
+- Mainsail web interface: 80/443 (via reverse proxy)
 - Moonraker API: 7125
 - Camera stream: 8080 (localhost only)
 

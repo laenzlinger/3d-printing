@@ -7,7 +7,7 @@
 **Printer:** Creality Ender 3 V2 Neo
 - Klipper firmware via KIAUH
 - Moonraker API on port 7125
-- Fluidd web interface at https://3d.laenzlinger.net
+- Mainsail web interface at https://3d.laenzlinger.net
 - Crowsnest webcam configured
 - BLTouch for bed leveling
 - SSH access: `ssh 3d.home`
